@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+<style>
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  
+  background: rgb(194, 236, 194);
+}
+.contentv{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+ 
+}
+
+.wrapper{
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.wrapper header1{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header1 .icons{
+  display: flex;
+}
+header1 .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header1 .icons span:hover{
+  background: #f2f2f2;
+}
+header1 .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li.selected{
+  color: blue;
+}
+
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+/*Deep Lilac color #9B59B6   */
+.days li.active::before{
+  background: pink;
+}
+
+
+
+/*pale gray color#f2f2f2   */
+.days li:not(.active):hover::before{
+  background: green;
+}
+</style>
+
+<!--html-->
+
+      <div>
+       <h2><span  style = "padding: 20px; display:sticky;"><a href="index.html">Back to home</a></span></h2>
+      </div>     
+<section class = "contentv">
+
+     <br>
+     
+     <label for="myDate">Enter YEAR & MONTH you are interesed in:</label>
+     
+     <input class ="myinput" type="date"  id="myDate">
+      <button  id = "atu" type = "submit" onclick = "mymd()"><h1> </button>
+     
+<br>
+    <div class="wrapper">
+      <header1>
+        <p class="current-date"></p>
+        
+      </header1>
+
+
+      <div class="calendar">
+        <ul class="weeks">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="days"></ul>
+      </div>
+      
+    </div>
+<h2><span style = "padding:2px; background-color:Pink; color:black;">Pink means NOT available </span></h2>
+<br><br>
+<p id="demo"></p>
+</section>
+
+<!--html ends-->
+<script>
+//auto button click
+ let autob= setInterval(function() {
+      var button = document.getElementById("atu");
+      if (button) {
+        button.click();
+      }
+    }, 100);
+setTimeout(autob, 10);
+
+</script>
+
+<script>
+// function for default value in date  
+document.addEventListener("DOMContentLoaded", (event) => {
+  const dateInput = document.querySelector("input.myinput");
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const day = String(today.getDate()).padStart(2, "0");
+  const formattedDate = `${year}-${month}-${day}`;
+  dateInput.value = formattedDate;
+});
+</script>
+
+<script>
+//main function
+function mymd(){
+const daysTag = document.querySelector(".days"),
+currentDate = document.querySelector(".current-date"),
+prevNextIcon = document.querySelectorAll(".icons span");
+
+// getting new date, current year and month
+const isToday = "";
+const liTag ="";
+const inputDate = document.getElementById("myDate").value;
+console.log(inputDate);
+console.log("manuel");
+let date =  new Date(inputDate),
+currYear = date.getFullYear(),
+currMonth = date.getMonth();
+
+// storing full name of all months in array
+const months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+
+const renderCalendar = () => {
+    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
+    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
+    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+    let liTag = "";
+
+    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    }
+
+    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+        // adding active class to li if the current day, month, and year matched
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
+                     && currYear === new Date().getFullYear() ? "active" : "";
+let sel = i;  
+        
+let ndToday = i+1 === date.getDate() ? "active" : "";
+let rdToday = i+4 === date.getDate() ? "active" : "";
+let thToday = i+5 === date.getDate() ? "active" : "";        
+       liTag += `<li class="${isToday} ${ndToday} ${rdToday} ${thToday} ">${i}</li>`;
+    }
+
+    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
+    }
+ 
+ 
+
+ 
+    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
+   
+    daysTag.innerHTML = liTag;
+
+
+document.addEventListener("click", displayDate);
+}
+
+renderCalendar();
+
+
+
+
+
+
+}  // main function mymd ends  
+</script>
+
+
+<script>
+
+
+function displayDate() {
+  document.getElementById("demo").innerHTML  = Date() ;
+}
+</script>
+
+  </body>
+</html>

@@ -1,216 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+ <head>
+   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/brcss.css">
-    <link rel="stylesheet" href="style/mynavcss.css ">
-    <link rel="stylesheet" href="style/servecss.css">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    <link rel="stylesheet" href ='css/stf.css.css'>
+    <link rel="stylesheet" href ='css/slidecss.css'>
+    <link rel="stylesheet" href ='css/thumbcss.css'>
+    <link rel="stylesheet" href ='css/brcss.css'>
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
-    
-    
-   <!-- <link rel="stylesheet" href="descss.css">-->
-     <title>Services</title>
+   <style>
+   .modal {
+    position:fixed;
+    margin:30px;
+    padding:20px;
+    max-width: 120ch;
+    border: solid 2px;  
+  }
+.card #srv1 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
 
- </head> 
-<style>
+.card #srv2 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
+.card #srv3 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
 
- </style>
+.card #srv4 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
+.card #srv5 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
 
+.card #srv6 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
+.card #srv7 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
+
+.card #srv8 {
+  display:none;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
+
+
+}
+
+
+</style>
+   <script>
+          window.addEventListener("load", () => {
+          const loader = document.querySelector(".loader");
+
+          loader.classList.add("loader--hidden");
+
+          loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
+          });
+        });
+    </script>
+          <script src = "script.js" defer></script>
+
+  </head>
 <body>
-  <nav class= "navbar"> 
-      <div class= "brand-title">
-        <p> Home</p> 
-        <a href="index.html" class= "nav_foot1">
-          <img src= "images/GmpsLogo.png" style ="float: left">    
-       </a> 
-      </div>
+     <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+         
+          
+          <li><a href="reservex2.html">Reservation</a></li>
+          <li><a href="locationx.html">Location</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+   <section class="services" id="services">
+      <h2>Our Services</h2>
+      <p>Take a look at some of our memorable CEBU adventures.</p>
+      
+         <li class="card">
+          <video width = 600 height = 400 controls autoplay>
+                  <source src= 'images/gbbbeach.mp4' type="video/mp4" >                 
+          </video>    
+               
+          <p>Video Clip Room services</p>
+         </li>
+      <ul class = "cards">  
+        <li class="card">
+          
+
+          <img class="thumbnail" src='images/recppic1.png' alt="Thumbnail" onclick="showFullImage('images/recppic1.png')">
+  	      <img class="full-image" id="fullImage" src='images/recppic1.png' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		     <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>
+
+        
+          
+          <p>Our reception desk is responsible for your smooth check in at your arrival. 
+
+It looks after your stay. It makes sure your needs are met, <span style = "color:red ">questions answered</span>. 
+
+It usually performs<span style = "color:red "> multiple duties</span> throughout the property. 
+Processing payments and other finacial transactions are done here.
+
+Your first interaction with us is through the receptionist.
+
+Additional staff members will be introduced to you in the course of your stay by the reception desk.
 
 
-      <a href="#" class="toggle-button">
-       <span class="bar"></span>
-       <span class="bar"></span>
-       <span class="bar"></span>
-      </a>
-     
-     <div class= "navbar-links">
-       <ul>
-              <li><a href="reserve.html">Reservation</a></1i>
-                <li><a href="rooms.html">Our Rooms</a></1i>
-                
-               <li><a href="about.html">About</a></1i>
-                                           
-       </ul>
-     </div>      
+It helps you in ordering food, and other services. It will arranged some of your touring needs. Maps and tour guides
+</p>
 
-  </nav>
-  <br>
-<div class= "foodmost">
-      <div class = "foodbanner">
-              
-              
-              
-              <h2 class="serve1">   We compartamentalized our services like bowls on a dinner table <br>but all are interconnected at the end</h2>
-              <h2 class ="serve2" style = "color:red">  Check our services below</h2>
+ <p><a href= "#srv1" button onclick="myFunction1()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv1">
+
+<h2>Our reception desk is responsible for your smooth check in at your arrival. 
+It looks after your stay. It makes sure your needs are met, <span style = "color:red ">questions answered</span>. 
+
+It usually performs<span style = "color:red "> multiple duties</span> throughout the property. 
+Processing payments and other finacial transactions are done here.
+
+Your first interaction with us is through the receptionist.
+
+Additional staff members will be introduced to you in the course of your stay by the reception desk.
+
+
+It helps you in ordering food, and other services. It will arranged some of your touring needs. Maps and tour guides
+</h2>
+
+<p><a href= "#srv1" button onclick="myFunction1()">Don't show big font</a></p>
+  </div>        
+        </li>
+        <li class="card">
+         
+        
+           <img class="thumbnail" src='images/mcab3pic1.png' alt="Thumbnail" onclick="showFullImage('images/mcab3pic1.png')">
+  	      <img class="full-image" id="fullImage" src='images/mcab3pic1.png' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>
+          <p>To get to our property from airport, <span style = "color:red ">we have a pick-up service from Mactan International Airport (CEB) for a fee to cover for the GAS  and DRIVER'S effort.</span>
+ 
+For $10 fee for the 25 kilometer 45 minutes stretch of a drive from the airport, plus heavy trafiic this will be your best option to save time and money.
+
+This will ensure you that you  will reach to your destination to our property in Compostela.
+
+The Normal taxi will cost at least $20 or P1000 pesos.
+
+Please inform us in your reservation that you will need this service.
+Contact us directly to inquire about this service, as we offer complimentary service with your room "sometimes". 
+
+You can also use Cebu's online travel transport such as <span style = "color:red "> GRAB or Maxim</span> or regular taxi to transport you to our place.</p>
+
+<p><a href= "#srv2" button onclick="myFunction2()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv2">
+          <h2>To get to our property from airport, <span style = "color:red ">we have a pick-up service from Mactan International Airport (CEB) for a fee to cover for the GAS  and DRIVER'S effort.</span>
+ 
+For $10 fee for the 25 kilometer 45 minutes stretch of a drive from the airport, plus heavy trafiic this will be your best option to save time and money.
+
+This will ensure you that you  will reach to your destination to our property in Compostela.
+
+The Normal taxi will cost at least $20 or P1000 pesos.
+
+Please inform us in your reservation that you will need this service.
+Contact us directly to inquire about this service, as we offer complimentary service with your room "sometimes". 
+
+You can also use Cebu's online travel transport such as <span style = "color:red "> GRAB or Maxim</span> or regular taxi to transport you to our place.</h2>
+<p><a href= "#srv2" button onclick="myFunction2()">Don't show big font</a></p>
+  </div>
+
+        </li>
+        <li class="card">
+
+           <img class="thumbnail" src='images/hkgpic.png' alt="Thumbnail" onclick="showFullImage('images/hkgpic.png')">
+  	      <img class="full-image" id="fullImage" src='images/hkgpic.png' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>
+
+          
+          
+          <p>Our housekeeping rules require guests to maintain the  cleanliness during their stay and avoid leaving it in a state requiring excessive cleaning, though we don't charge, they are <span style = "color: red">NOT expected to do the DEEP CLEANING </span> themselves. 
+Guests must respect designated trash areas, report any damage promptly, and are responsible for costs incurred from their damage or unexpected cleaning needs. As a <span style = "color: red">GOOD host</span>, we are responsible for providing you a clean, safe, and hazard-free environment before check-in. We provide towels for the number of registered guests only </p>
+
+<p><a href= "#srv3" button onclick="myFunction3()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv3">
+<h2>
+Our housekeeping rules require guests to maintain the  cleanliness during their stay and avoid leaving it in a state requiring excessive cleaning, though we don't charge, they are <span style = "color: red">NOT expected to do the DEEP CLEANING </span> themselves. 
+Guests must respect designated trash areas, report any damage promptly, and are responsible for costs incurred from their damage or unexpected cleaning needs. As a <span style = "color: red">GOOD host</span>, we are responsible for providing you a clean, safe, and hazard-free environment before check-in. We provide towels for the number of registered guests only
+
+
+</h2>
+<p><a href= "#srv3" button onclick="myFunction3()">Don't show big font</a></p>
+  </div>
+
+        </li>
+        <li class="card">
+
+           <img class="thumbnail" src='images/computerpic.png' alt="Thumbnail" onclick="showFullImage('images/computerpic.png')">
+  	      <img class="full-image" id="fullImage" src='images/computerpic.png' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>
+
+         
+          
+          <p>We have wifi but it is not totally free.
+
+There is a free Internet for the first day only.
+
+We employ a piso lang internet access, a local service that provides internet as per use.
+
+It is a machine located at the reception where you put in an amount of fee for the duration of your use.
+
+<span style = "color: red"> The internet cost is 60 pesos per day</span> per device for the 512 kbps, and 150 pesos per day per device for the 4 MB internet service.</p>
+
+<p><a href= "#srv4" button onclick="myFunction4()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv4">
+<h2>
+We have wifi but it is not totally free.
+
+There is a free Internet for the first day only.
+
+We employ a piso lang internet access, a local service that provides internet as per use.
+
+It is a machine located at the reception where you put in an amount of fee for the duration of your use.
+
+<span style = "color: red"> The internet cost is 60 pesos per day</span> per device for the 512 kbps, and 150 pesos per day per device for the 4 MB internet service
+
+
+</h2>
+<p><a href= "#srv4" button onclick="myFunction4()">Don't show big font</a></p>
+  </div>
+        
+        </li>
+        <li class="card">
+
+           <img class="thumbnail" src='images/localstore2.jpg' alt="Thumbnail" onclick="showFullImage('images/localstore2.jpg')">
+  	      <img class="full-image" id="fullImage" src='images/localstore2.jpg' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>        
+          
+          
+          <p>Our breakfast is  provided at the tower every morning from 6:00 AM to  10:00 AM at the tower. We have some rules to be followed. We expect good etiquette and we have some requirements to ensure food safety, hygiene, and a pleasant experience for everyone. 
+
+Schedule for breakfast is posted in your room. Guest etiquette includes using provided serving utensils, not touching food with bare hands, practicing proper hand hygiene, taking reasonable portions, and not taking food from the buffet for later consumption. We, in turn, enforce rules about paying guests, maintain food temperatures and hygiene, and may have specific requirements for staff presence and equipment.
+
+Bon Appetit! .</p>
+<p><a href= "#srv5" button onclick="myFunction5()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv5">
+<h2>
+
+Our breakfast is  provided at the tower every morning from 6:00 AM to  10:00 AM at the tower. We have some rules to be followed. We expect good etiquette and we have some requirements to ensure food safety, hygiene, and a pleasant experience for everyone. 
+
+Schedule for breakfast is posted in your room. Guest etiquette includes using provided serving utensils, not touching food with bare hands, practicing proper hand hygiene, taking reasonable portions, and not taking food from the buffet for later consumption. We, in turn, enforce rules about paying guests, maintain food temperatures and hygiene, and may have specific requirements for staff presence and equipment.
+
+Bon Appetit! .
+
+</h2>
+<p><a href= "#srv5" button onclick="myFunction5()">Don't show big font</a></p>
+  </div>          
+        </li>
+
+<li class="card">
+
+           <img class="thumbnail" src='images/tguidepic.png' alt="Thumbnail" onclick="showFullImage('images/tguidepic.png')">
+  	      <img class="full-image" id="fullImage" src='images/tguidepic.png' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>
+
+          
+          
+          <p>There are so many interesting places to visit in Cebu.
+
+Our tour guides primary are from the companies that we recommend . Their duties involve leading visitors on tours, providing engaging information about local attractions, ensuring group safety, and managing logistics like transportation and itineraries. They are also well-versed in Cebu's landscape and local cultural norms.They also answer questions, assist and suggest potential unforgettable experience-drenched but safe places to go. They know the <span style="color:red"> popular beaches, local markets, historical museums, old churches and local eateries, so you will experience the local cuisines.</span> They are trained to  perform administrative tasks such as booking and reservations. Essentially, they are responsible for creating a positive and informative experience for you to meet locals in the area. They usually speak good English and they speak the local dialects. They will try safeguarding you from <span style="color:red">scammers, thieves and hustlers.</span> </p>
+<p><a href= "#srv6" button onclick="myFunction6()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv6">
+<h2>
+There are so many interesting places to visit in Cebu.
+
+Our tour guides primary are from the companies that we recommend . Their duties involve leading visitors on tours, providing engaging information about local attractions, ensuring group safety, and managing logistics like transportation and itineraries. They are also well-versed in Cebu's landscape and local cultural norms.They also answer questions, assist and suggest potential unforgettable experience-drenched but safe places to go. They know the <span style="color:red"> popular beaches, local markets, historical museums, old churches and local eateries, so you will experience the local cuisines.</span> They are trained to  perform administrative tasks such as booking and reservations. Essentially, they are responsible for creating a positive and informative experience for you to meet locals in the area. They usually speak good English and they speak the local dialects. They will try safeguarding you from <span style="color:red">scammers, thieves and hustlers.</span>
+
+
+</h2>
+<p><a href= "#srv6" button onclick="myFunction6()">Don't show big font</a></p>
+  </div>        
+        </li>
+        <li class="card">
+
+           <img class="thumbnail" src='images/tbuspic.jpg' alt="Thumbnail" onclick="showFullImage('images/tbuspic.jpg')">
+  	      <img class="full-image" id="fullImage" src='images/tbuspic.jpg' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>        
+          
+          
+          <p>There are two bus terminals in Cebu,  <span style="color:red">(1) North Bus Terminal and (2) South Bus Terminal</span>. These terminals are the starting points that will take you outside Cebu City and also, potentially, take you out of the Cebu island where you will take a barge across waters to the neighboring popular islands such as <span style="color:red">Camotes and Siquijor.Or to Dumaguete.</span>
+
+These buses are air conditioned and give you comfortable rides. To name the most popular bus series are<span style="color:red"> Ceres Bus  and Corominas systems </span>. The bus routes are very popular and well known in Cebu's touring places, either to visit to the north or south. WE are sure you will find the most exciting places for snorkling and beaches to hide away in these popular routes.</p>
+<p><a href= "#srv7" button onclick="myFunction7()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv7">
+<h2>
+There are two bus terminals in Cebu,  <span style="color:red">(1) North Bus Terminal and (2) South Bus Terminal</span>. These terminals are the starting points that will take you outside Cebu City and also, potentially, take you out of the Cebu island where you will take a barge across waters to the neighboring popular islands such as <span style="color:red">Camotes and Siquijor.Or to Dumaguete.</span>
+
+These buses are air conditioned and give you comfortable rides. To name the most popular bus series are<span style="color:red"> Ceres Bus  and Corominas systems </span>. The bus routes are very popular and well known in Cebu's touring places, either to visit to the north or south. WE are sure you will find the most exciting places for snorkling and beaches to hide away in these popular routes
+
+
+</h2>
+<p><a href= "#srv7" button onclick="myFunction7()">Don't show big font</a></p>
+  </div>          
+        </li>
+        <li class="card">
+          
+
+           <img class="thumbnail" src='images/laundrypic.png' alt="Thumbnail" onclick="showFullImage('images/laundrypic.png')">
+  	      <img class="full-image" id="fullImage" src='images/laundrypic.png' alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		       <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+             </div>          
+          
+          
+          <p>Our rooms are equipped with some a appliances and amenities including in-room features like coffee makers and TVs are standard. But,<span style="color:red"> you will pay per day for mini-fiddges, microwaves.</span>  Essential amenities also include high-speed Wi-Fi, comfortable bedding, quality toiletries, and air conditioning (for a fee for electricity). We offer these services and features to enhance the guest experience, though we are not high-end establishments we still provide more <span style="color:red">diverse options such as dinner plates, utensils, cleaning tools and repair tools.</span> We also provide <span style="color:red">Laundry services.</span>  .</p>
+ <p><a href= "#srv8" button onclick="myFunction8()"><span style = "color:red ">Show big font (Click twice)</span></a></p>
+  <div id ="srv8">
+<h2>
+Our rooms are equipped with some a appliances and amenities including in-room features like coffee makers and TVs are standard. But,<span style="color:red"> you will pay per day for mini-fiddges, microwaves.</span>  Essential amenities also include high-speed Wi-Fi, comfortable bedding, quality toiletries, and air conditioning (for a fee for electricity). We offer these services and features to enhance the guest experience, though we are not high-end establishments we still provide more <span style="color:red">diverse options such as dinner plates, utensils, cleaning tools and repair tools.</span> We also provide <span style="color:red">Laundry services.</span>  
+
+
+</h2>
+<p><a href= "#srv8" button onclick="myFunction8()">Don't show big font</a></p>
+  </div>           
+        </li>
+        
+      </ul>
+    </section>
+
+<script>
+
+    function showFullImage(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage").src = imageUrl;
+       //  document.getElementById("fullImage").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage").src = imageUrl;
+       document.getElementById("lightbox").style.display = "flex";
+       }
+      
+      function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+  </script> 
+ <div class="footer-container">
             
-              <br>
-              <br>  
-              
-                <img class = "foodsize" src = "images/food1.jpg" alt="food1"  title = "food1"> 
-            
-      </div>
-    
-
-      <div class= "topall">
-  
-        <div class= "topall-left">        
-                    <div class="toppage1">
-                            <h1 style = color:black>Reservation </h1>
-                            <br>
-                            <ul>
-                               <li> We would like to screen clients</li>
-                               <li> for Safety and Security of your stay</li>
-                           </ul>
-                                        
-                     </div>
-                                    
-                    <div class="toppage2">
-                                <h1 style = color:black> Registration</h1>    
-                                 <br>
-                                 <ul>
-                                        <li> Check in time is 2pm</li>  
-                                        <li> Check out time is 12pm</li>
-                                  </ul>       
-                    </div> 
-
-                      <div class="toppage3">
-                          <h1  style =color:black>Room housekeeping</h1>
-                          <br>
-                          <ul>
-                          <li> Will change beddings if requested</li> 
-                              <li>No vistors after 9pm</li>    
-                          </ul>
-                      </div>
-           
-                      <div class="toppage4">     
-                          <h1  style = color:black>Utilities</h1>
-                          <br>
-                          <ul>
-                              <li>Microwave oven rental is $3 /day</li>  
-                                <li> Aircon $3 per day</li>    
-                          </ul>
-                      </div>    
-                                
-            </div>   
-            <div class= "topall-right">            
-                      <div class="toppage1">
-                            <h1  style =color:black>Transportation and <br>Tour Guide</h1>
-                            <br>
-                            <ul>
-                                <li> Will pick you up at the airport for</li> 
-                                <li>$10. We are situated 25 kilometers </li>   
-                                <li> from the Mactan Airport.See map</li>
-                            </ul>
-                      </div>                 
-                      
-                       <div class="toppage2">     
-                        <h1  style = color:black>Internet Access</h1>
-                        <br>
-                        <ul>
-                               <li>Free first 2 hours of stay</li>  
-                                <li>Access code will be given</li>   
-                                <li>per request</li>    
-                        </ul>
-                       </div>    
-                      <div class="toppage3">
-                            <h1  style =color:black> Kitchen and Laundry<br> needs</h1>
-                            <br>
-                            <ul>
-                                <li> Will arrange for special request</li> 
-                                <li> Will charge per item</li>    
-                            </ul>
-                      </div>                 
+     <div class= "footer">
+                <div class = "ft">
+                   <h2 class="logo"><a href = "index.html"><img src ='images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+                   <div>
+                     <a href = "index.html">Home</a>
+                  </div>
+                </div> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="#">Taxi - Grab</a>
+                   <a href="#">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="#">Ayala</a>
                     
-                     <div class="toppage4">     
-                          <h1  style = color:black>Cars or any Rentals</h1>
-                          <br>
-                          <ul>
-                              <li>We will arrange per request</li>  
-                              <li>Drivers maybe included</li>    
-                          </ul>
-                     </div>  
-               </div>         
-     
-       </div> <!-- topall ends-->
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="#">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="#">Cebu AirB&B</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="#">Travel Escape</a>
+                   <a href="#"> Carbon Market</a>
+                   <a href="#">Bus Terminals</a>
+                
+                </div>
 
-   </div>  <!--foodmost ends-->
-<br> 
-<div class = "callserv">           
-  <h1 class="callserv1" style =  "color:red;">Call 0931-111-9999  for service</h1>
-  <h1 class ="callserv2" style =  "color: red;">Please mention your Room number. Thanks</h1>
-</div>
-<br>
+          </div><!--footer-ends-->
 
-<div class="footer-container">
-  <div class= "nav_foot">     
-        <p> Home</p>    
-         <a href="index.html" class= "nav_foot1">
-            <img src= "images/GmpsLogo.png" style ="float: left">    
-        </a>    
-                       
-  </div>                  
-  <div class= "footer">
+</div><!--footer-container-->     
+<script>
+function myFunction1() {
+  var x = document.getElementById("srv1");
 
-        <div class="footer-heading footer-1">
-            <h2>Cebu Links</h2>
-            <a href="#">Mactan Airport</a>
-            <a href="#">Taxi - Grab</a>
-            <a href="#">Weather</a>
-            <a href="#">SM Malls</a>
-            <a href="#">Ayala</a>
-            
-        </div>
-        
-        <div class="footer-heading footer-2">
-            <h2>Hotel & Resorts</h2>
-            <a href="#">Green Lagoon</a>
-            <a href="#">Marco Polo Hotel</a>
-            <a href="#">SurfSide Motel</a>
-            <a href="#">Cebu AirB&B</a>
-            
-        </div>
-        
-        <div class="footer-heading footer-3">
-            <h2>Social Media</h2>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Youtube</a>
-            <a href="#">Twitter</a>
-        
-        </div>
-        <div class="footer-heading">
-              <h2>Favorite Vlogs</h2>
-              <a href="#">Amazing Philippines</a>
-            <a href="#">Travel Escape</a>
-            <a href="#"> Carbon Market</a>
-            <a href="#">Bus Terminals</a>
-          <!--    <div class="footer-email-form">  
-              <form>
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname">
-                <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <input type="submit" value="Submit">
-              </form>
-          <input type="email" placeholder="Enter your email" 
-              address id="footer-email">
-              <input type="submit" value="Sign Up" 
-              id="footer-email-btn">-->
-          </div>
-  </div> <!-- footer-->
-</div> <!-- footer-container-->
-</body>
-<script>    
-    src="script/desscript.js";
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction2() {
+  var x = document.getElementById("srv2");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  var x = document.getElementById("srv3");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction4() {
+  var x = document.getElementById("srv4");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction5() {
+  var x = document.getElementById("srv5");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction6() {
+  var x = document.getElementById("srv6");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction7() {
+  var x = document.getElementById("srv7");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction8() {
+  var x = document.getElementById("srv8");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 </script>
+<body>
 </html>

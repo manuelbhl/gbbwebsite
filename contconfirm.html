@@ -1,0 +1,91 @@
+<html>
+<header>
+      <nav class="navbar">
+        
+        <ul class="lg">
+          
+         <h1>
+              
+            <a href = "index.html">Back to Home</a>       
+         </h1>
+          
+         </ul>
+      </nav>
+    </header>
+<body>
+  <style>
+.confirm {
+  display: flex;
+  flex-direction:column;
+  width:80%;
+  height:100%;
+  margin:50px;
+  text-align: center;
+  background-color: rgb(236, 236, 144);
+}
+.contmsg {
+width:90%;
+margin:10px;
+padding: 5px;
+border: 2px solid green;
+background-color: yellow;
+}
+
+  </style>
+  <div class = "confirm">
+         <h1 id="resdate"></h1>    
+       <h1> Thank you </h1>
+       <br>
+       <div>
+         <h1> Name:<span id = "next-contname" style = color:blue></span> </h1>
+       </div>
+               
+       <div>
+         <h2><span style = color:red> We will get back to you at</span> 
+         <h1>Your Email:<span id = "next-email" style = color:red></span> </h1>
+         
+       </div>  
+       
+            
+       <div class= "contmsg">
+         <h1> Your Message below has been sent to GBB:<span style = color:blue></span></h1> 
+         <h1><span id = "next-msg" style = color:blue></span></h1>
+       </div>
+         <br>
+         
+         
+          </h2>     
+        <h1><input type="checkbox" checked="checked" name="sendemail"> </input> 
+         PLease send me email response or <span id = "next-msg" style = color:blue>Uncheck for NO</span></h1> 
+        <h2><span style = color:red> This is not real. Test only</span></h2>
+              
+    
+  </div>
+
+<script>
+    
+    const contname= localStorage.getItem("next-contname");   
+    const email = localStorage.getItem("next-email");
+    const msg = localStorage.getItem("next-msg");
+const pw = localStorage.getItem("next-pw");
+
+
+    document.getElementById("next-contname").textContent = contname;
+    document.getElementById("next-email").textContent = email;
+    document.getElementById("next-msg").textContent = msg;
+
+
+</script>
+<script>
+
+const d = new Date();
+document.getElementById("resdate").innerHTML = d;
+let t = d.slice(20, 10);
+ console.log(t);
+</script>
+
+</body>
+
+</html>
+   
+

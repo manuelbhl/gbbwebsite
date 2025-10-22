@@ -1,0 +1,165 @@
+<!--{% extends 'base.html' %}
+
+{% block content%}
+-->
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contx gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    <link rel="stylesheet" href ='css/stfcss.css'>
+    <link rel="stylesheet" href ='css/slidecss.css'>
+  
+    <link rel="stylesheet" href ='css/thumbcss.css'>
+    <link rel="stylesheet" href ='css/brcss.css'>
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+ 
+
+  </head>
+<header>
+      <nav class="navbar">
+        <h2 class="logo"><img src="images/GmpsLogo.png" alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="lg">
+          
+          <a href = "index.html">Home</a>
+          
+          
+         </ul>
+      </nav>
+    </header>
+    
+<body>
+<style>
+  
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #333;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+
+  cursor: pointer;
+  background: #463aef;
+}
+</style>
+<div>
+<br><br>
+    <section class="contact" id="contact">
+          <br> 
+          <h2>Enter Your Name, Email and Message</h2>
+           <p>Reach out to us for any inquiries or feedback.</p>
+           
+          <div class="col form" >
+            <form name = "myform" id = 'form'>
+              <input type="text" name = "contname" id ="contname" placeholder="Full Name*" required>
+              <input type="email" name = "email" id = "email" placeholder="Email*" required>
+              <textarea  name = "msg" id = "msg" placeholder="Message*" required></textarea>
+      
+              <button type="submit" class="btn-submit">Submit contact</button>
+<button type="button" onclick="cancelout()" class="cancelbtn">Cancel</button>
+             </form> 
+             
+          </div>
+        </section>
+    
+    
+</div>
+<script>
+function cancelout() {
+  window.history.back();
+}
+</script>
+<script>
+    const form = document.getElementById('form');
+    const contname = document.getElementById('contname');
+    const email = document.getElementById('email');
+    const msg = document.getElementById('msg');
+    const pw = document.getElementById('contname');
+
+    form.addEventListener('submit', function(e){
+         e.preventDefault();
+
+         const contnameValue = contname.value;
+         const emailValue = email.value;
+         const msgValue = msg.value;
+         const pwValue = pw.value;
+
+         localStorage.setItem('next-contname',contnameValue);
+         localStorage.setItem('next-email',emailValue);
+         localStorage.setItem('next-msg',msgValue);
+         localStorage.setItem('next-pw',pwValue);
+
+         window.location.href = "contconfirm.html"
+
+})
+
+</script>
+
+
+</body>
+</html>
+<!--{% endblock %}-->
+
+
+

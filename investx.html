@@ -1,0 +1,220 @@
+<!--{% extends 'base.html' %}
+
+{% block content%}
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBBflask site </title>
+    <link rel="stylesheet" href='css/style.css'>
+    
+   
+    <link rel="stylesheet" href='css/brcss.css'>
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    
+    
+  </head>
+  
+     
+    
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src ='images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+<body>
+<style>
+  
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #333;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+
+  cursor: pointer;
+  background: #463aef;
+}
+.contact h2 {
+  color: red; 
+  background-color: yellow;
+}
+
+</style>
+<div>
+<br><br><br><br>
+<section class="contact" id="contact">
+
+<div class = 'id01'>
+   <h2>Enter Your Name, Email and Message</h2>
+   <br>
+   <p>Reach out to us for any inquiries about investing</p>
+   
+   <div class="col form" >
+     <form name = "myform" id ="form" >
+         <hr>
+           <input type="text" name = "contname" id ="contname" placeholder="Full Name*" required>
+           <input type="email" name = "email" id = "email" placeholder="Email*" required>
+           <textarea  name = "msg" id = "msg" placeholder="Message*" required></textarea>
+         
+         <div class="clearfix">
+           <button type="button" onclick="cancelout()" class="cancelbtn">Cancel</button>
+           <button type="submit" class="signupbtn">Sign Up</button>
+         </div>      
+         <br>
+         <p> By creating an account you agree to our terms .</p>
+
+        <h2>PLease sign up. Check the box below </h2><input type="checkbox" checked="checked" name="sendemail" style="margin-bottom:15px" >
+         </input>
+     </form>
+  </div>     
+</div>             
+</section>
+    
+    
+</div>
+<div class="footer-container">
+            
+     <div class= "footer">
+                <div class = "ft">
+                   
+                   <h2 class="logo"><a><img src='images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+
+                 
+                   <div>
+                     <a href = "index.html">Home</a>
+                  </div>
+                </div><!--ft-ends--> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="https://www.youtube.com/watch?v=Y3rVRM4vAC4">Taxi - Grab</a>
+                   <a href="https://www.youtube.com/watch?v=hPLk5OvSb-A">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="https://www.youtube.com/watch?v=1KQK6c7BL54">Ayala</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="https://www.youtube.com/watch?v=P2bFeqj2ggI">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="https://www.youtube.com/@StanlyOnMedia/shorts">Cebu Food</a>
+                    <a href="lindex">GBB Reserved</a>
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="https://www.youtube.com/results?search_query=travel+escapes+latest+vlog">Travel Escape</a>
+                   <a href="https://www.youtube.com/watch?v=EUx4W64lOys"> Carbon Market</a>
+                   <a href="https://www.youtube.com/@brogabrielsuroysugbo">Bus Terminals</a>
+                   <a href="contlist">GBB Contacts</a>
+                </div>
+
+          </div><!--footer-ends-->
+
+</div><!--footer-container-->
+
+<script>
+function cancelout() {
+  window.history.back();
+}
+</script>
+<script>
+    const form = document.getElementById('form');
+    const contname = document.getElementById('contname');
+    const email = document.getElementById('email');
+    const msg = document.getElementById('msg');
+    const pw = document.getElementById('pw');
+
+    form.addEventListener('submit', function(e){
+         e.preventDefault();
+
+         const contnameValue = contname.value;
+         const emailValue = email.value;
+         const msgValue = msg.value;
+
+         localStorage.setItem('next-contname',contnameValue);
+         localStorage.setItem('next-email',emailValue);
+         localStorage.setItem('next-msg',msgValue);
+
+         window.location.href = "invconfirm.html"
+
+})
+
+</script>
+</body>
+</html>
+<!--{% endblock %}
+-->
+
+

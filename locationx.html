@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    <!-- <link rel="stylesheet" href ='css/stfcss.css'>
+    <link rel="stylesheet" href ='css/slidecss.css'> -->
+    <link rel="stylesheet" href ='css/brcss.css'>
+   <link rel="stylesheet" href ='css/thumbcss.css'>
+
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+   <style>
+   .modal {
+    position:fixed;
+    margin:30px;
+    padding:20px;
+    max-width: 120ch;
+    border: solid 2px;  
+  }
+
+</style>
+
+
+  </head>
+<body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          
+          <li><a href="services.html">Services</a></li>
+          <li><a href="reservex2.html">Reservation</a></li>
+         
+          
+        </ul>
+      </nav>
+   </header>
+ 
+
+<br/>
+ <h1>We are here. Our Location in the World. <span style = "background-color: rgb(0, 255, 153); font-size: smaller;">Click photos for full page</span></h1>
+ 
+ 
+   <div class ="homeloc"> 
+
+     <!-- contentloc boundary1  -->
+
+          <div class ="contentloc">
+   
+            <div>
+
+  	      <img class="thumbnail" src="images/direction2.png" alt="Thumbnail" onclick="showFullImage('images/direction2.png')">
+  	      <img class="full-image" id="fullImage" src="images/direction2.png" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		 <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                  <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+
+               </div>
+
+              <p>Direction 45 kilometers away. You may </p>
+              <h3><a href= "#gogmap">Google it</a></h3>.
+              <p>45 minutes from the Cecu Mactan Airport.</p> 
+             
+            </div>   
+        
+ 
+        <div class = "contentloc">
+        
+          <div>
+          <img class="thumbnail" src='images/GoogleCEb8.png' alt="Thumbnail" onclick="showFullImage('images/GoogleCEb8.png')">
+  	      <img class="full-image" id="fullImage" src="images/GoogleCEb8.png" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		  <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	    	  <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image2">
+    		  </div> 
+
+               </div>     
+                   
+          <p>Green Lagoon Beach</p>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+          <p>100 meters from our Property</p>
+       
+        </div> 
+       </div>
+
+      <div class ="contentloc">
+       
+        <div>
+  	   <img class="thumbnail" src='images/GoogleCEbu2.png' alt="Thumbnail" onclick="showFullImage('images/GoogleCEbu2.png')">
+  	   <img class="full-image" id="fullImage" src="images/GoogleCEbu2.png" alt="Full Image3">
+
+  	    <div class="lightbox" id="lightbox">
+
+    		<span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	        <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image3">
+    	        </div>
+
+  
+            </div>     
+
+          <p>Cebu Island</p>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+          <p>It is located at the middle of the whole country, geograpically.</p>
+
+         </div>   
+        </div>             
+    </div>
+
+<!--  end contentloc boundary1  -->
+
+ <!--  contentloc boundary2  -->
+         <div class ="contentloc">
+   
+            <div>
+
+  	      <img class="thumbnail" src="images/mapFront.png" alt="Thumbnail" onclick="showFullImage('images/mapFront.png')">
+  	      <img class="full-image" id="fullImage" src="images/mapFront.png" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		 <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                  <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+
+               </div>
+
+              <p>Tour Adventures</p>
+             <h3><a href= "#gogmap">Google it</a></h3>.
+              <p>We can arrange for you tour of Cebu.</p> 
+             
+            </div>   
+        
+ 
+        <div class = "contentloc">
+        
+          <div>
+          <img class="thumbnail" src='images/entrance1.jpg' alt="Thumbnail" onclick="showFullImage('images/entrance1.jpg')">
+  	      <img class="full-image" id="fullImage" src= "images/entrance1.jpg" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox2">
+
+    		  <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	    	  <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image2">
+    		  </div> 
+
+               </div>     
+                   
+          <p>Entrance to our Property </p>
+          <h3><a href="https://www.tripadvisor.ca/Attractions-g294261-Activities-Cebu_Island_Visayas.html">Google it</a></h3>. 
+          <p>50 meters from the national road.</p>
+       
+        </div> 
+       </div>
+
+      <div class ="contentloc">
+       
+        <div>
+  	   <img class="thumbnail" src='images/GoogleCEbu.png' alt="Thumbnail" onclick="showFullImage('images/GoogleCEbu.png')">
+  	   <img class="full-image" id="fullImage" src='images/GoogleCEbu.png' alt="Full Image">
+
+  	    <div class="lightbox" id="lightbox">
+
+    		<span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	        <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image">
+    	        </div>
+
+  
+            </div>     
+
+          <p>Cebu Philippines.  </p>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+          <p>The Philppines is at the Pacific Ocean front .</p>
+
+         </div>   
+        </div>             
+    </div>
+
+ <!--  end contentloc boundary2  -->
+
+ <!-- homeloc boundary 3 -->
+         <div class ="contentloc">
+   
+            <div>
+
+  	      <img class="thumbnail" src='images/mapFront2.png' alt="Thumbnail" onclick="showFullImage('images/mapFront2.png')">
+  	      <img class="full-image" id="fullImage" src="images/mapFront2.png" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		 <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                  <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+
+               </div>
+
+              <p>Cebu local map </p>
+              <h3><a href= "#gogmap">Google it</a></h3>.
+              <p>One of the most beautiful islands in the Philippines.</p> 
+             
+            </div>   
+        
+ 
+        <div class = "contentloc">
+        
+          <div>
+          <img class="thumbnail" src='images/gl1a.jpg' alt="Thumbnail" onclick="showFullImage('images/gl1a.jpg')">
+  	      <img class="full-image" id="fullImage" src='images/gl1a.jpg' alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		  <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	    	  <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image2">
+    		  </div> 
+
+               </div>     
+                   
+          <p>Green Lagoon beach resort </p>
+          <h3><a href="https://www.tripadvisor.ca/Attractions-g294261-Activities-Cebu_Island_Visayas.html">Google it</a></h3>. 
+          <p>100 meters from us</p>
+       
+        </div> 
+       </div>
+
+      <div class ="contentloc">
+       
+        <div>
+  	   <img class="thumbnail" src= "images/cath.jpg" alt="Thumbnail" onclick="showFullImage('images/cath.jpg')">
+  	   <img class="full-image" id="fullImage" src="images/cath.jpg" alt="Full Image">
+
+  	    <div class="lightbox" id="lightbox">
+
+    		<span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	        <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image3">
+    	        </div>
+
+  
+            </div>     
+
+          <p>a 500+ years old Cebu Cathedral Church</p>
+          <h3><a href= "#gogmap">Google it</a></h3>. 
+          <p>It is located in downtown Cebu, 25 KM from Compostela, Cebu.</p>
+
+         </div>   
+        </div>             
+    </div>
+<!--  end contentloc boundary3  -->
+
+</div>
+     <!-- contentloc boundary4  -->
+
+          <div class ="contentloc">
+   
+            <div>
+
+  	      <img class="thumbnail" src="images/airport2.png" alt="Thumbnail" onclick="showFullImage('images/airport2.png')">
+  	      <img class="full-image" id="fullImage" src="images/airport2.png" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		 <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	         <div class="lightbox-content">
+                  <img id="lightboxImage" src="" alt="Full Image">
+                 </div>
+
+               </div>
+
+              <p>Mactan International Airport </p>
+              <h3><a href="https://www.mactancebuairport.com/">Google it</a></h3>. 
+              <p>45 minutes from the Cecu Mactan Airport.</p> 
+             
+            </div>   
+        
+ 
+        <div class = "contentloc">
+        
+          <div>
+          <img class="thumbnail" src='images/greenpool.jpg' alt="Thumbnail" onclick="showFullImage('images/greenpool.jpg')">
+  	      <img class="full-image" id="fullImage" src="images/greenpool.jpg" alt="Full Image">
+
+  	       <div class="lightbox" id="lightbox">
+
+    		  <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	    	  <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image2">
+    		  </div> 
+
+               </div>     
+                   
+          <p>Green Lagoon Swiming pool</p>
+          <h3><a href= "#gogmap">Google it</a></h3>.  
+
+            
+        </div> 
+       </div>
+
+      <div class ="contentloc">
+       
+        <div>
+  	   <img class="thumbnail" src='images/house99a.jpg' alt="Thumbnail" onclick="showFullImage('images/house99a.jpg')">
+  	   <img class="full-image" id="fullImage" src="images/house99a.jpg" alt="Full Image3">
+
+  	    <div class="lightbox" id="lightbox">
+
+    		<span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	        <div class="lightbox-content">
+        		<img id="lightboxImage" src="" alt="Full Image3">
+    	        </div>
+
+  
+            </div>     
+
+          <p>Our Whole GBB house</p>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+          <p>It is located at the middle of the whole country, geograpically.</p>
+
+         </div>   
+        </div>             
+    </div>
+
+<!--  end contentloc boundary4  -->
+
+<div id = "gogmap">  
+<br><br><br>
+<h1>Google Map </h1>    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125585.15710833191!2d123.76389351451255!3d10.37892281006321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999258dcd2dfd%3A0x4c34030cdbd33507!2sCebu%20City%2C%206000%20Cebu%2C%20Philippines!5e0!3m2!1sen!2sca!4v1701490957532!5m2!1sen!2sca" 
+                                  width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+</div>
+
+
+
+<script>
+
+
+    function showFullImage(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage").src = imageUrl;
+       //  document.getElementById("fullImage").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage").src = imageUrl;
+       document.getElementById("lightbox").style.display = "flex";
+       
+
+    }
+
+       function showFullImage2(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage2").src = imageUrl;
+       //  document.getElementById("fullImage2").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage2").src = imageUrl;
+       document.getElementById("lightbox2").style.display = "flex";
+       
+
+    }
+
+      function showFullImage3(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage3").src = imageUrl;
+       //  document.getElementById("fullImage3").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage3").src = imageUrl;
+       document.getElementById("lightbox3").style.display = "flex";
+       
+
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function closeLightbox2() {
+      document.getElementById("lightbox2").style.display = "none";
+    }
+   function closeLightbox3() {
+      document.getElementById("lightbox3").style.display = "none";
+    }
+  </script> 
+<br><br>
+
+<div class="footer-container">
+            
+     <div class= "footer">
+                <div class = "ft">
+                   
+                   <h2 class="logo"><a><img src="images/GmpsLogo.png" alt="img" width = 100 height = 100></a></h2>
+
+                 
+                   <div>
+                     <a href = "/index">Home</a>
+                  </div>
+                </div><!--ft-ends--> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="https://www.youtube.com/watch?v=Y3rVRM4vAC4">Taxi - Grab</a>
+                   <a href="https://www.youtube.com/watch?v=hPLk5OvSb-A">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="https://www.youtube.com/watch?v=1KQK6c7BL54">Ayala</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="https://www.youtube.com/watch?v=P2bFeqj2ggI">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="https://www.youtube.com/@StanlyOnMedia/shorts">Cebu Food</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="https://www.youtube.com/results?search_query=travel+escapes+latest+vlog">Travel Escape</a>
+                   <a href="https://www.youtube.com/watch?v=EUx4W64lOys"> Carbon Market</a>
+                   <a href="https://www.youtube.com/@brogabrielsuroysugbo">Bus Terminals</a>
+                
+                </div>
+
+          </div><!--footer-ends-->
+
+</div><!--footer-container-->
+
+
+</body>   
+
+</html>

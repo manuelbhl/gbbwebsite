@@ -1,25 +1,646 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>GBB WEBsite</title>
-   <!--<link rel="stylesheet" href="background_styles.css">-->
-   <link rel="stylesheet" href="style/brcss.css">
-   <link rel="stylesheet" href="style/mynavcss.css">
    
-   <link rel="stylesheet" href = "style/anicss.css">
-  <link rel="stylesheet" href = "style/slidecss.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    <!--<link rel="stylesheet" href ='css/stfcss.css'> 
+    <link rel="stylesheet" href ='css/slidecss.css'>-->
+    <link rel="stylesheet" href ='css/openht.css'>
+   <link rel="stylesheet" href ='css/brcss.css'>
+
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
    <style>
-   .modal {
-    position:fixed;
-    margin:30px;
-    padding:20px;
-    max-width: 120ch;
-    border: solid 2px;  
+
+
+  
+/* Full-width input fields -- invest */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 10px;
+  top: 90px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color:  #f7f0f0;
+  padding-top: 2px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.invest h2{
+  color: red;
+  text-decoration:none;
+  text-align:center;
+}
+.invest img{
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
   }
-</style>
-   <script>
+}
+
+
+   </style>
+
+<style>
+
+
+
+#ourstory{
+  display:block;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color: lightgreen;
+  margin-top: 10px;
+}
+
+#mission{
+  display:block;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color:lightblue;
+  margin-top: 10px;
+}
+
+
+#vision{
+  display:block;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  background-color: lightpink;
+  margin-top: 10px;
+}
+
+.homepage h1{
+  display: flex;
+  height: 100%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+</style>   
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#roomdesc">Rooms</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="reservex2.html">Reservation</a></li>
+          <li><a href="locationx.html">Location</a></li>
+          <li><a href="slide.html">Images</a></li>
+          <li><a href="#about">About Us</a></li>
+         <li><a href="#contactf">Contact Us</a></li>
+          <li><a href="#invest">Invest</a></li>
+          <li><a href="opengbb.html">Opening</a></li>
+        </ul>
+      </nav>
+    </header>
+ <!--
+  <div class="loader"></div>
+ -->
+  
+ 
+
+ <style>
+ 
+  .text1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.text1 a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.text1 a:hover {
+  color: #ddd;
+  background: rgba(255,255,255,0.3);
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.roomdesc a {
+  color: red;
+  padding: 10px;
+  font-size:larger;
+  font-family: "Arial" sans-serif;
+}
+
+</style> 
+
+      
+    <section class="homepage" id="home">
+      <div class="content">
+        <img src ='images/surf2.jpg' width="100%">
+        <div class="text1">   
+          <div class= "centered">  
+             <h1>Home Away From Home</h1>
+             <p>
+              Discover top-quality rooms to rent for unbelivable rates in your unforgettable CEBU adventures. 
+             <br> contact us now and make plans for your lasting memories.</p>
+             <br/>
+             <a href="#roomdesc">Our Rooms and Rates</a>
+          </div>
+        </div> 
+
+      </div>
+    </section>
+    <section class ="rdesc" id ="rdesc">
+      <br>
+      <br>
+      <h2><p> Our House has 4 room units which are <span style="color:blue">diversed </span><strong>in sizes and layouts</strong> </p>
+      </h2>
+      <br>
+    <ul>
+      <li><strong><a href="roomx1.html">Unit 1</a></strong></li>
+     <p> It is spacious.<span style="color:blue"> It is like a house layout with a complete</span> <span style="color:red "> upstairs and downstairs set up.<em> Kitchen below and bedrooms upstairs.</em></span> All in all with<span style="color:darkblue">  2 bathrooms</span> .</p>
+      <li><strong><a href="roomx2.html">Unit 2</a></strong></li>
+     <p> It is on the second floor with breakfast table <span style="color:red">on a huge balcony.</span>  It is spacious with one bedroom with kitchen and bathroom.</p>
+      <li><strong><a href="roomx3.html">Unit 3</a></strong></li>  
+<p> It has a <span style="color:blue">regular size layout</scan> but complete <span style="color:red ">bedroom with kitchen and bathroom. </span>A couple can stay on a double bed </p>
+      <li><strong><a href="roomx4.html">Unit 4</a></strong></li>  
+<p> It has <span style="color:blue"><i>a small  size layout but complete</i> </span><span style="color:red">with kitchen and bathroom. </span>A couple can stay on a double bed </p>
+   </ul>
+      <br>
+      <br>
+     <h1>Explore our rooms description- Tour in them below</h1> 
+  <!--    <i class="fa-solid fa-arrow-down"></i> -->
+      <h1>&#x2193</h1>
+
+    </section>
+    <section class="rooms" id="roomdesc">
+      <h2> Please enjoy our house as much as we do. </h2>
+      <ul class="cards">
+        <li>
+<br>
+<h1 style="background-color: yellow;"> Explore our Rooms 1,  2,  3  and 4 below</h1>
+          <h2 style="background-color: greenyellow;"> Click each unit to check availability</h2>  
+          <video width = "600" height = "400" controls autoplay muted>
+                  <source src='images/gbbbeach.mp4' type="video/mp4"  >                 
+          </video>    
+               
+          <p>Boracay Beach video</p>
+        </li>
+        <li class="card">
+          <a href = "roomx1.html"><img src ='images/rmunit1.jpg' alt="img"></a>
+          <h3><a href="roomx1.html">Unit 1</a></h3>
+          <p>Rent  $35 a day, furnished</p>
+          <p>You take the whole Up-Down</p> 
+          <p>Own Kitchen and Bathroom</p>
+          <p>Minimum stay 2 nights</p>
+          <p>Maximum stay 5 nights (negotiable)</p>
+<!-- Availabilty1  -->
+
+
+  </br>      
+        <button class="button open-button" style="background-color: yellow;"></a>
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 1 Availabilty</a>  </span></button>  
+             
+ 
+       <br>       
+
+
+<!-- end Availabilty1  -->
+
+          
+        </li>
+        <li class="card">
+          <a href = "roomx2.html"><img src ='images/rmunit2.jpg' alt="img"></a>
+          <h3><a href="roomx2.html">Unit 2</a></h3>
+                   
+           <p>Rent  $35 a day, furnished</p>
+           <p>You with Terrace</p> 
+           <p>Own Kitchen and Bathroom</p>
+           <p>Minimum stay 2 nights</p>
+           <p>Maximum stay 5 nights (negotiable)</p>
+<!-- Availabilty2  -->
+
+
+  </br>      
+        <button class="button open-button" style="background-color: yellow;">
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 2 Availabilty</a>  </span></button> 
+ 
+       <br>       
+ 
+
+<!-- end Availabilty2  -->
+
+         
+        </li>
+        <li class="card">
+          <a href = "roomx3.html"><img src ='images/rmunit4a.jpg' alt="img"></a>
+          <h3><a href="roomx3">Unit 3</a></h3>
+          <p>Rent  $15 a day, furnished</p>
+          <p>Small room</p> 
+          <p>Own Kitchen and Bathroom</p>
+          <p>Minimum stay 2 nights</p>
+          <p>Maximum stay 5 nights (negotiable) </p>
+<!-- Availabilty3  -->
+
+
+  </br>      
+        <button class="button open-button" style="background-color: yellow;">
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 3 Availabilty</a>  </span></button> 
+ 
+       <br>       
+
+
+<!-- end Availabilty3  -->
+
+         
+        </li>
+        <li class="card">
+          <a href = "roomx4.html"><img src ='images/rmunit2a.jpg' alt="img"></a>
+          <h3><a href="roomx4.html">Unit 4</a></h3>
+          <p>Rent  $20 a day, furnished</p>
+          <p>regular</p> 
+          <p>Own Kitchen and Bathroom</p>
+          <p>Minimum stay 2 nights</p>
+          <p>Maximum stay 5 nights (negotiable)</p>
+<!-- Availabilty4  -->
+
+
+  </br>      
+        <button class="button open-button" style="background-color: yellow;">
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 4 Availabilty</a>  </span></button>
+ 
+
+ 
+       <br>       
+ 
+
+<!-- end Availabilty4  -->
+
+                      
+  
+        </li>
+        
+      </ul>
+    </section>
+
+   
+
+
+
+ <section id ="about">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>About Us</h2>
+      <p>Discover our story in providing room accumodations in Cebu.</p>
+      <div class="row company-info">
+<p>Click</p>
+<p>Twice</p>
+<h1>&#x2193</h1>
+        <h3><a href= "#ourstory" button onclick="myFunction1()">Our Story</button></a></h3>
+        <p>Experience the excellence of our friendly local citizens and their smiling faces, where we have been offering high-quality care for essentials skills needed to navigate among the locals for our touring enthusiasts in this initial opening. Our commitment to quality and customer satisfaction ensures that every adventurer that stay with us can rely on for their room needs, albiet, Filipino way.</p>
+      </div>
+
+    <section id="ourstory">
+              
+          <h1> Our story</h1> 
+                   
+        <h1>Experience the excellence of our friendly local citizens and their smiling faces, where we have been offering high-quality care for essentials skills needed to navigate among the locals for our touring enthusiasts in this initial opening. Our commitment to quality and customer satisfaction ensures that every adventurer that stay with us can rely on for their room needs, albiet, Filipino way.</h1>
+<button style= "color:white" onclick="myFunction1()"><h1>Click to hide Photo</h1></button>    
+           <img src ='images/01.jpg' width="100%"> 
+          <h3>Manuel and Rebecca, in Vancouver for 6 months.</h3>
+          
+          <p>We should not be here. We should have been in Cebu sipping mango juice.</p> 
+      <br><br>
+
+        <button style= "color:white" onclick="myFunction1()"><h1>Click to hide Photo</h1></button>    
+     
+    </section>
+
+
+      <div>
+       <h3><a href= "#mission" button onclick="myFunction2()">Mission</button></a></h3>
+        
+        <p>Our staff, with their top-notch services, have a mission to familiarize you with the Filipino culture in Cebu's unique ways of caring, provide you infos, with the point of view of the locals, that enhance your stay in the local settings. We strive to provide you with reliable, durable, and quality care in TLC that contribute to memorable adventures and lasting memories, a way different from the generic Airbnb experience. Why? because you will live among US in a house and still preserve your privacy.</p>
+      </div>
+      <section id="mission">
+       <h1> Mission</h1> 
+          
+        <h1>Our staff, with their top-notch services, have a mission to familiarize you with the Filipino culture in Cebu's unique ways of caring, provide you infos, with the point of view of the locals, that enhance your stay in the local settings. We strive to provide you with reliable, durable, and quality care in TLC that contribute to memorable adventures and lasting memories, a way different from the generic Airbnb experience. Why? because you will live among US in a house and still preserve your privacy.</h1>
+       <button style= "color:white" onclick="myFunction2()"><h1>Click to hide Photo</h1></button>     
+       <img src ='images/peddler2.jpg' width="100%"> 
+            </br>
+        <button style= "color:white" onclick="myFunction2()"><h1>Click to hide Photo</h1></button>
+     </section> 
+
+
+      <div>
+        <h3><a href= "#vision" button onclick="myFunction3()">Vision</button></a></h3>
+        
+        <p>Our vision is to become the go-to destination for Cebu enthusiasts, known for our extensive thorough and premium advices for places to visit with our exceptional local guides who would not hesistate to let you try our terrifying motorbike rides, local two-wheeled taxis, known as Habal-habal and would also let you try our local cuisines such as adobo, pancit and balut. 
+
+We aspire to inspire and enable people to embrace the beauty of our Cebuano culture and create unforgettable stay experiences with us. We will turn - you- into a smiling person as Cebuanos do. The smiles we give you will be hard to wipe off on your faces,too, long after you leave our island.</p>
+      </div>
+    <section id="vision">
+   <h1> Vision</h1> 
+      
+        <h1>Our vision is to become the go-to destination for Cebu enthusiasts, known for our extensive thorough and premium advices for places to visit with our exceptional local guides who would not hesistate to let you try our terrifying motorbike rides, local two-wheeled taxis, known as Habal-habal and would also let you try our local cuisines such as adobo, pancit and balut. 
+
+We aspire to inspire and enable people to embrace the beauty of our Cebuano culture and create unforgettable stay experiences with us. We will turn - you- into a smiling person as Cebuanos do. The smiles we give you will be hard to wipe off on your faces,too, long after you leave our island.</h1>
+    <button style= "color:white" onclick="myFunction3()"><h1>Click to hide Photo</h1></button>    
+    <img src ='images/mjeeppic4.jpg' width="100%"> 
+            <br><br>
+
+        <button style= "color:white" onclick="myFunction3()"><h1>Click to hide Photo</h1></button>    
+     </section> 
+
+
+
+</section>
+
+<!-- hide-->
+
+
+
+
+
+
+
+
+
+
+<!-- end hide-->
+
+
+    <section>
+
+
+      <div class="#rowteam" id ="rowteam">
+        <br>
+        <br>
+        <h3><a href="staff.html"><img src= 'images/grpIcon.svg' width = 100px height =100px>Our Team</a></h3>
+        <ul>
+          <li>Manuel and Rebecca - Founders</li>
+          <li>Cerino  - Tour Specialist</li>
+          <li>Inoy    - Maintenance</li>
+          <li>Inday   - Operations Manager</li>
+        </ul>
+      </div>
+    </section>
+   
+<!--Invest-->
+
+<section> 
+<div class="invest" id = "invest" > 
+<br><br><br><br><br><br>  
+
+ <a href="tshare.html"><img src= 'images/handmoney.png' width = 25px height =250px ></a>   
+  <h1 style="text-align:center;"> &#x2191;</h1>
+  <p style="text-align:center;"> Click Me</p>
+ <h2><br><span style="background-color: yellow">  Join and Click above <br>to check an<span style="color: green"> Investment</span> Opportunity on Roomshare and <span style="color: green"> Save !</span></h2> 
+ <br>          
+                                
+
+</section>
+<!--Invest ends-->
+
+ <!-- contact-->    
+  <section class="contactf" id="contactf">         
+          
+          <br><br><br><br>
+          <h2>Contact Us</h2>
+           <p>Reach out to us for any inquiries or feedback.</p>
+          <br><br>
+          <h2><a href="contx.html"><span style="background-color: yellow;"><span style="color: green;">Click to Subscribe</span> </span></a></h2>                                  
+  
+      <div class="row">
+<br>
+        <div class="col information">
+          
+          <div class="contact-details">
+            <p><i class="fas fa-map-marker-alt"></i> Compostela, Gimbal, Canamucan Cebu Philippines 6000</p>
+            <p><i class="fas fa-envelope"></i> gimbalbnb@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 1-604-259-2783 Canada </p>
+            <p><i class="fas fa-phone"></i> 011-63-956-674-2650 Text Philippines</p>
+            <p><i class="fas fa-clock"></i> Monday - Friday: 6:00 AM - 6:00 PM</p>
+            <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 6:00 PM</p>
+            <p><i class="fas fa-clock"></i> Sunday: CLOSED</p>
+            <p><i class="fas fa-globe"></i> www.gbbwebsite.com</p>
+          </div>      
+        </div> 
+      </div> 
+    </section>
+ <!--Modal start-->    
+<div id="id01" class="modal">
+  
+  <form class="modal-content" action="#"><span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="container">
+      <h1>Newsletter</h1>
+      <hr>
+      <label for="fullname"><b>Full name</b></label>
+      <input type="text" placeholder="Enter Your full name" name="fullname" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="msg"><b>message</b></label>
+      <input type="text" placeholder="Message" name="msg" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Subscribe
+      </label>
+
+      <p>By creating an account you agree to our Terms <a href="#" style="color:dodgerblue">Unsubscribe</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>     
+
+<!-- end contact--> 
+<br>     
+<br> 
+<br> 
+<br>     
+<br> 
+<br>
+<div class="footer-container">
+            
+     <div class= "footer">
+                <div class = "ft">
+                   
+                   <h2 class="logo"><a><img src="images/GmpsLogo.png" alt="img" width = 100 height = 100></a></h2>
+
+                 
+                   <div>
+                     <a href = "index.html">Home</a>
+                  </div>
+                </div><!--ft-ends--> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="https://www.youtube.com/watch?v=Y3rVRM4vAC4">Taxi - Grab</a>
+                   <a href="https://www.youtube.com/watch?v=hPLk5OvSb-A">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="https://www.youtube.com/watch?v=1KQK6c7BL54">Ayala</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="https://www.youtube.com/watch?v=P2bFeqj2ggI">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="https://www.youtube.com/@StanlyOnMedia/shorts">Cebu Food</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="https://www.youtube.com/results?search_query=travel+escapes+latest+vlog">Travel Escape</a>
+                   <a href="https://www.youtube.com/watch?v=EUx4W64lOys"> Carbon Market</a>
+                   <a href="https://www.youtube.com/@brogabrielsuroysugbo">Bus Terminals</a>
+                
+                </div>
+
+          </div><!--footer-ends-->
+
+</div><!--footer-container-->
+ 
+
+
+
+ <!-- <script>
           window.addEventListener("load", () => {
           const loader = document.querySelector(".loader");
 
@@ -29,519 +650,52 @@
             document.body.removeChild(loader);
           });
         });
-    </script>
-          <script src = "script.js" defer></script>
+    </script> -->
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
-  </head>
-<body>
- <!--
-  <div class="loader"></div>
- -->
-  
-     <nav class= "navbar"> 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
-          <div class= "brand-title">
-            <p> Home</p> 
-            <a href="index.html"  class= "nav-links"></a>
-            <img src= "images/GmpsLogo.png"/>
-         
+<script>
+function myFunction1() {
+  var x = document.getElementById("ourstory");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
-
-            <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            </a>
-      
-           <div class= "navbar-links">
-            <ul>
-              
-              <li><a href="reserve.html">Reservation</a></1i>
-              <li><a href="rooms.html">Our Rooms</a></1i>
-              <li><a href="services.html">Services</a></1i>
-              <li><a href="about.html">About</a></li>
-
-
-                                          
-            </ul>
-         </div>      
-     </nav> <!-- navbar ends-->
- 
-    <div class = "maincon"> 
-    
-  
-       <div class="videobox">
-           <h1> ROOMS FOR RENT STARTING $15 PER DAY</h1>
-           <h1>  COMPOSTELA, CEBU, PHILIPPINES</h1>
-        </div> <!-- videobox-->  
-        
-        <div class = video1 > 
-            <div class = "ani">
-
-                    <div>
-                      <a href="openht.html" style="background-color: yellow; font-size:large">Click Me</a>                 
-                    </div> 
-                    <div>
-                    <p>News Flash!!</p>
-                  </div>
-            </div>   <!--ani-->
-            
-            <div> <!-- videobox-->
-                <dialog class="modal" id="modal" >
-                 <div class="animation01">
-                    <div class="line_content line_content01">
-                        <div class="line_wrapper line_wrapper01">
-                            <div class="line01"></div>
-                            <div class="line02"></div>
-                        </div>
-                    </div>
-                    <div class="line_content line_content02">
-                        <div class="line_wrapper line_wrapper02">
-                            <div class="line02"></div>
-                            <div class="line01"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="animation02">
-                    <div class="square">
-                        <span class="square_item square_item01"></span>
-                        <span class="square_item square_item02"></span>
-                        <span class="square_item square_item03"></span>
-                        <span class="square_item square_item04"></span>
-                        <span class="square_item square_item05"></span>
-                        <span class="square_item square_item06"></span>
-                        <span class="square_item square_item07"></span>
-                        <span class="square_item square_item08"></span>
-                        <span class="circle_item01"></span>
-                        <span class="circle_item02"></span>
-                        <span class="circle_item03"></span>
-                        <span class="circle_item04"></span>
-                        <span class="circle_item05"></span>
-                        <span class="circle_item06"></span>
-                        <span class="circle_item01_1"></span>
-                        <span class="circle_item02_2"></span>
-                        <span class="circle_item03_3"></span>
-                        <span class="circle_item04_4"></span>
-                        <span class="circle_item05_5"></span>
-                        <span class="circle_item06_6"></span>
-                    </div>
-                </div>
-                <div class="animation03">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-               
-                
-            
-                </dialog>   
-                </div>  <!-- modal --> 
-
-                         <div class="centered">Welcome to the Philippines...</div>    
-                         
-                
-                          <video width="100%" height="100%" autoplay loop muted >
-                            <source src="images/gbbbeach.mp4" type="video/mp4">          
-                            
-                          </video>    
-                                 
-                </div> <!-- video1-->
-        
-
-                <div class = "vidpart">             
-                  <br>
-                  <br>
-                  <br>      
-                  <h1 style = "color: green;"> THIS IS OUR HOUSE  WITH 4 ROOMS TO RENT</h1>                                                
-                    <img class = "hs21" src= "images/house24.jpg" width = "1200" height = "800" alt="house21" title ="house21" >                                                                                                      
-                  
-                  <a href= "rooms.html">
-                    <h1 class ="rm"> Click Here to see the inside<br>of All rooms in the house</h1>
-                  </a>                                     
-                      
-                </div> <!-- vidpart ends-->                            
-                      
-                <div class ="housevid">
-                
-                  <br>
-                  <br>
-                  <h1 class = "rm" style = "color: green;"> BELOW IS A VIDEO OF OUR 4 UNIT  HOUSE </h1>   
-                      <video class = "hs" width="1200" height="800" autoplay loop muted >
-                        <source src="images/HouseTourRJune2024.mp4" type="video/mp4" >       
-                                
-                      </video>    
-                </div> <!-- housevid ends-->
-                      
-                <div class = "bookitems">           
-                  <h1 class = "rm" style="color:red;">Enjoy the Slideshow BELOW <span style = "color:yellow;">(mouse over to stop scrolling )</span></h1>
-                  <h1 class = "rm" style = "color:green;"> More Photos of the Main House and its vicinity</h1>
-                </div>      
-                
-                <div class="slide-container">
-            
-                  <div class="slides">
-                    <img src="images/mapFront2.png" class="active">
-                    <img src="images/mapFrontDirect.png">
-                    <img src="images/mapFront.png">
-                    
-                    <img src="images/direction2.png">
-                    <img src="images/cebuShutteStack3.png">
-                    <img src="images/surf2.jpg">
-                    <img src="images/adven1.jpg">
-                    <img src="images/adven2.jpg">
-                    <img src="images/adven3.jpg">
-                    <img src="images/adve5.jpg">
-                    <img src="images/adve6.jpg">
-                    <img src="images/GoogleCEbu2.png">
-                    <img src="images/GoogleCEbu3.png">
-
-                    <img src="images/GoogleCEb8.png">
-                    <img src="images/GoogleCEb9.png">
-                    <img src="images/cons1.png">
-                    <img src="images/cons2.png">
-                    <img src="images/unitmain.jpg">
-                    <img src="images/house21.jpg">
-                    <img src="images/house22.png">
-                    <img src="images/airport1.png">
-                    <img src="images/airport2.png">
-                    
-                    <img src="images/cebuShutteStack2.png">
-                    
-                    <img src="images/vendor1.jpg">
-                    <img src="images/vendor2.jpg">
-                    <img src="images/people1.jpg">
-                    <img src="images/people2.jpg">
-                    <img src="images/cebutour.jpg">
-                    <img src="images/streetkitchen.jpg">            
-                    <img src="images/insidechurch.jpg">
-                  </div>
-
-                  <div class="buttons">
-                    <span class="next">&#10095;</span>
-                    <span class="prev">&#10094;</span>
-                  </div>
-
-                  <div class="dotsContainer">
-                    <div class="dot active" attr='0' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='1' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='2' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='3' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='4' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='5' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='6' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='7' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='8' onclick="switchImage(this)"></div>
-                    
-                    <div class="dot" attr='9' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='10' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='11' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='12' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='13' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='14' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='15' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='16' onclick="switchImage(this)"></div>
-
-                    <div class="dot" attr='17' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='18' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='19' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='20' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='21' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='22' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='23' onclick="switchImage(this)"></div>
-                    <div class="dot" attr='24' onclick="switchImage(this)"></div>
-
-                  </div><!--dotsContainer-->
-
-                  
-              </div> <!--slide-container-->
-
-                  <br>
-                  <br>
-                  <div >           
-                    <h2 style = "color:red; " >   Check our Location in the world. </h2>
-                    <h2 style = "color:green; " >   Use Google map  for Cebu City </h2>
-                 </div>
-                    
-              <div class= "gogmap">  
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125585.15710833191!2d123.76389351451255!3d10.37892281006321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999258dcd2dfd%3A0x4c34030cdbd33507!2sCebu%20City%2C%206000%20Cebu%2C%20Philippines!5e0!3m2!1sen!2sca!4v1701490957532!5m2!1sen!2sca" 
-                                  width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
-
-               </div>  <!-- gogmap ends-->   
-                  
-      </div> <!--video1-->
-      <br>
-      <br>
+function myFunction2() {
+  var x = document.getElementById("mission");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 
-    <div class="footer-container">
-          
-        <div class= "nav_foot">     
-            <p> Home</p>    
-            <a href="index.html" class= "nav_foot1">
-                <img src= "images/GmpsLogo.png" style ="float: left">    
-            </a>    
-                          
-        </div>       
-      
-        <div class= "footer">
-   
-           <div class="footer-heading footer-1">
-               <h2>Cebu Links</h2>
-               <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
-               <a href="#">Taxi - Grab</a>
-               <a href="#">Churches</a>
-               <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
-               <a href="#">Ayala</a>
-               
-           </div>
-           
-           <div class="footer-heading footer-2">
-               <h2>Hotel & Resorts</h2>
-               <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
-               <a href="#">Marco Polo Hotel</a>
-               <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
-               <a href="#">Cebu AirB&B</a>
-               
-           </div>
-           
-           <div class="footer-heading footer-3">
-               <h2>Social Media</h2>
-               <a href="#">Instagram</a>
-               <a href="#">Facebook</a>
-               <a href="#">Youtube</a>
-               <a href="#">Twitter</span></a>
-           
-           </div>
-           <div class="footer-heading">
-                 <h2>Favorite Vlogs</h2>
-                 <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
-               <a href="#">Travel Escape</a>
-               <a href="#"> Carbon Market</a>
-               <a href="#">Bus Terminals</a>
-             
-            </div>
-         </div><!--footer-->
-     </div><!--footer-container-->
-   </div>
+function myFunction3() {
+  var x = document.getElementById("vision");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
-          <script>
-            const modal = document.querySelector("#modal");
-            const openModal = document.querySelector(".open-button");
-            const closeModal = document.querySelector(".close-button");
-            const closeModal2 = document.querySelector(".close-button2");
+</script>
 
-            openModal.addEventListener("click", () => {
-              modal.showModal();
-            });
-            
-            closeModal.addEventListener("click", () => {
-              modal.close();
-            });
-            closeModal2.addEventListener("click", () => {
-              modal.close();
-            });
 
-            const docard = document.querySelector("#docard");
-            const openDocard = document.querySelector(".open-button2");
-            const closeDocard = document.querySelector(".close-button2");
-            
-            openDocard.addEventListener("click", () => {
-              docard.showModal();
-            });
-            
-            closeDocard.addEventListener("click", () => {
-              docard.close();
-            });
+  <script src ='script/slidejs.js' defer></script> 
+  </body>   
 
-            
-            </script>  
-
-</div> <!-- maincon-->
-          <script type="text/javascript">
-          
-          // Access the Images
-          let slideImages = document.querySelectorAll('img');
-          // Access the next and prev buttons
-          let next = document.querySelector('.next');
-          let prev = document.querySelector('.prev');
-          // Access the indicators
-          let dots = document.querySelectorAll('.dot');
-
-          var counter = 0;
-
-          // Code for next button
-          next.addEventListener('click', slideNext);
-          function slideNext(){
-          slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-          if(counter >= slideImages.length-1){
-            counter = 0;
-          }
-          else{
-            counter++;
-          }
-          slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-          indicators();
-          }
-
-          // Code for prev button
-          prev.addEventListener('click', slidePrev);
-          function slidePrev(){
-          slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-          if(counter == 0){
-            counter = slideImages.length-1;
-          }
-          else{
-            counter--;
-          }
-          slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
-          indicators();
-          }
-
-          // Auto slideing
-          function autoSliding(){
-            deletInterval = setInterval(timer, 3000);
-            function timer(){
-              slideNext();
-              indicators();
-            }
-          }
-          autoSliding();
-
-          // Stop auto sliding when mouse is over
-          const container = document.querySelector('.slide-container');
-          container.addEventListener('mouseover', function(){
-            clearInterval(deletInterval);
-          });
-
-          // Resume sliding when mouse is out
-          container.addEventListener('mouseout', autoSliding);
-
-          // Add and remove active class from the indicators
-          function indicators(){
-            for(i = 0; i < dots.length; i++){
-              dots[i].className = dots[i].className.replace(' active', '');
-            }
-            dots[counter].className += ' active';
-          }
-
-          // Add click event to the indicator
-          function switchImage(currentImage){
-            currentImage.classList.add('active');
-            var imageId = currentImage.getAttribute('attr');
-            if(imageId > counter){
-            slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-            counter = imageId;
-            slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-            }
-            else if(imageId == counter){
-              return;
-            }
-            else{
-            slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-            counter = imageId;
-            slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
-            }
-            indicators();
-          }
-
-        </script>
-</body>
 </html>
-

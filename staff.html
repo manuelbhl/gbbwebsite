@@ -1,157 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+ <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/brcss.css">
-    <link rel="stylesheet" href="style/mynavcss.css ">
-    <link rel="stylesheet" href="style/stfcss.css">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    <link rel="stylesheet" href ='css/stfcss.css'>
+    <link rel="stylesheet" href ='css/slidecss.css'>
+  
+    <link rel="stylesheet" href ='css/thumbcss.css'>
+    <link rel="stylesheet" href ='css/brcss.css'>
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
-   <!-- <link rel="stylesheet" href="descss.css">-->
-     <title>Staff</title>
-     <style>
-
-     </style>
-</head>
-<body>
-    <nav class= "navbar"> 
-        <div class= "brand-title">
-            <p> Home</p> 
-          <a href="index.html" class= "nav_foot1">
-            <img src= "images/GmpsLogo.png" style ="float: left">    
-         </a> 
-        </div>
-        <a 
-          href="about.html">Previous page
-        </a>
-  
-        <a href="#" class="toggle-button">
-         <span class="bar"></span>
-         <span class="bar"></span>
-         <span class="bar"></span>
-        </a>
-  
-    </nav>
-
-
  
 
-        <div class="hero-img">
-            <img class = "stfe" src = "images/staff1.jpg" alt="food1" width = 1200 height = 600 title = "staff1"> 
-        </div>
-        <div class="wrapper">
-            
+  </head>
+<body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          
+          <li><a href="services.html">Services</a></li>
+          <li><a href="reservex2.html">Reservation</a></li>
+          <li><a href="locationx.html">Location</a></li>
+          
+        </ul>
+      </nav>
+
+ 
+    </header>
+<br><br><br><br>
             <section class="hero">
+
+              <div>
+
                 <h1> <span style = "color: blue;" >Meet Our Staff</span></h1>
                 <h1> <span style = "color: red;" >Regain your confidence in travelling.</span></h1>
                 <br>
-                <p class="subhead">Our Rooms are built with the sole purpose of taking your experiences<br> in room renting  to the next level.</p>
-  
-            </section>        
-            <header>
-                <br>
-                <br>
-              <!--  <a href="#" class="logo" > <span>Check My house with 4 Room units</span>
-                </a>
-               --> 
-                <div class="menu" >
-   
-                </div>
-            </header>
-            <br>
-            <br>
-            <br>
-            <section class="more-info">
-                <div class="feature">
-                    <div class="content">
-                        <p class="title">Our Maintenance</p>
-                        <p class="desc">I have faith in our guys. They are hard working and experts in their fields. <br>Promptness is my choice for workers.</p>
-                    </div>
-                   <img src= "images/sendo1.jpg" alt="Unit1" width="400" height="200" style="border:5px solid black"  title ="unit1">            
-                </div>
-                <div class="feature left">
-                    <div class="content">
-                        <p class="title">House Maids</p>
-                        <p class="desc">Our maids are top notch. <br> They are all experienced in home care for several years.</p>
-                    </div>
-   
-                    <img src= "images/bobit2.jpg" alt="Unit1" width="400" height="200" style="border:5px solid black"  title ="unit1">
-                </div>
-                <div class="feature">
-                    <div class="content">
-                        <p class="title">Managers</p>
-                        <p class="desc">They are very realiable and professionals.<br>Tell them exactly what you want accomplished. They will do it for you.</p>
-                    </div>
-                    <img src= "images/inong1.jpg" alt="Unit1" width="400" height="200" style="border:5px solid black"  title ="unit1">
-         
-                </div>
-            </section>
-  
+                <p class="subhead">Our Rooms are built with the sole purpose of taking your experiences
+                <br> in room renting  to the next level.</p>
+              </div>
+              <div class= "rightside">
+                   <img class="thumbnail" src="images/people1.jpg" alt="Thumbnail" width="1000" height="600" style="border:5px solid black"  title ="people1" onclick="showFullImage('images/people1.jpg')">
+  	               <img class="full-image" width="800" height="1200" id="fullImage" src="images/people.jpg" alt="Full Image">
+<h1 style="text-align:center;"> &#x2191;</h1>
+  <p style="text-align:center;"> Click Photos to Enlarge</p>
 
+  	                <div class="lightbox" id="lightbox">
+
+    		                <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	                 <div class="lightbox-content">
+                           <img id="lightboxImage" src="" alt="Full Image">
+                         </div>
+                       </div>    
+                      <h1> My workers are hardworking friendly people</h1>
+                </div>    
+  
+             </section> 
+<section class="more-info">
+            <div class="feature">
+                    <div class="content">
+                        <p class= "title"> Our Security Guards</p>
+                        <p class="desc">These individuals are trained in Martial Arts. They are hard working security experts in their fields. 
+                        <br>Patient and  self control are their strenght.</p>
+                    </div>
+                   <img class="thumbnail" src='images/11.jpg'alt="Thumbnail" width="400" height="600" style="border:5px solid black"  title ="guards" onclick="showFullImage('images/11.jpg')">
+  	               <img class="full-image" width="800" height="1200" id="fullImage" src='images/11.jpg' alt="Full Image">
+
+  	                <div class="lightbox" id="lightbox">
+
+    		                <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	                 <div class="lightbox-content">
+                         <img id="lightboxImage" src="" alt="Full Image">
+                       </div>
+                    </div>                
 
         </div>
+ </section>      
+            
+            <section class="more-info">
+            
+                  <div class="feature">
+                    <div class="content">
+                        <p class="title">Our Maintenance</p>
+                        <p class="desc">I have faith in our guys. They are hard working and experts in their fields. 
+                        <br>Promptness is my choice for workers.</p>
+                    </div>
+                
+                   <div>
+                   <img class="thumbnail" src='images/sendo1.jpg' alt="Thumbnail" width="400" height="200" style="border:5px solid black"  title ="Sendo" onclick="showFullImage('images/sendo1.jpg')">
+  	               <img class="full-image" id="fullImage" src='images/sendo1.jpg' alt="Full Image">
 
+  	                <div class="lightbox" id="lightbox">
 
+    		                <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	                 <div class="lightbox-content">
+                         <img id="lightboxImage" src="" alt="Full Image">
+                       </div>
+                    </div>       
+                 </div>          
+             </section>            
+             <section class="more-info" >
+              <div class="feature left">
+                <div class="content">
+                        <p class="title">House Maids</p>
+                        <p class="desc">Our maids are top notch. <br> They are all experienced in home care for several years.</p>
+                </div>
+             
+               <div>    
+                  <img class="thumbnail" src='images/staff1.jpg' alt="Thumbnail" width="400" height="200" style="border:5px solid black"  title ="Staff" onclick="showFullImage('images/staff1.jpg')">
+  	              <img class="full-image"   id="fullImage" src='images/staff1.jpg' alt="Full Image">
+
+  	               <div class="lightbox" id="lightbox">
+
+    		              <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	                <div class="lightbox-content">
+                        <img id="lightboxImage" src="" alt="Full Image">
+                      </div>
+                  </div>     
+                </div>     
+            </section>
+                          
+  
+         <section class="more-info">
+              <div class="feature">
+                    <div class="content">
+                        <p class="title">Managers</p>
+                        <p class="desc">They are very realiable and professionals.
+                        <br>Tell them exactly what you want accomplished. They will do it for you.</p>
+                    </div>
+              <div>    
+                <img class="thumbnail" src='images/inong1.jpg' alt="Thumbnail" width="400" height="200" style="border:5px solid black"  title ="managers" onclick="showFullImage('images/inong1.jpg')">
+  	            <img class="full-image" id="fullImage" src='images/inong1.jpg' alt="Full Image">
+
+  	            <div class="lightbox" id="lightbox">
+
+    		           <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	              <div class="lightbox-content">
+                       <img id="lightboxImage" src="" alt="Full Image">
+                    </div>
+                </div>     
+              </div>  
+            
+           </section>
+ 
+
+<script>
+
+    function showFullImage(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage").src = imageUrl;
+       //  document.getElementById("fullImage").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage").src = imageUrl;
+       document.getElementById("lightbox").style.display = "flex";
+       window.scrollTo({
+       top: 0,
+       left: 0,
+       behavior: "smooth"
+       });
+       }
+      
+      function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+  </script> 
 <div class="footer-container">
-    <div class= "nav_foot">     
-        <p> Home</p>    
-         <a href="index.html" class= "nav_foot1">
-            <img src= "images/GmpsLogo.png" style ="float: left">    
-        </a>    
-                       
-    </div>            
-    <div class= "footer">
+            
+     <div class= "footer">
+                <div class = "ft">
+                   <h2 class="logo"><a href = "index.html"><img src ='images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+                   <div>
+                     <a href = "index.html">Home</a>
+                  </div>
+                </div> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="#">Taxi - Grab</a>
+                   <a href="#">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="#">Ayala</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="#">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="#">Cebu AirB&B</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="#">Travel Escape</a>
+                   <a href="#"> Carbon Market</a>
+                   <a href="#">Bus Terminals</a>
+                
+                </div>
 
-          <div class="footer-heading footer-1">
-              <h2>Cebu Links</h2>
-              <a href="#">Mactan Airport</a>
-              <a href="#">Taxi - Grab</a>
-              <a href="#">Weather</a>
-              <a href="#">SM Malls</a>
-              <a href="#">Ayala</a>
-              
-          </div>
-          
-          <div class="footer-heading footer-2">
-              <h2>Hotel & Resorts</h2>
-              <a href="#">Green Lagoon</a>
-              <a href="#">Marco Polo Hotel</a>
-              <a href="#">SurfSide Motel</a>
-              <a href="#">Cebu AirB&B</a>
-              
-          </div>
-          
-          <div class="footer-heading footer-3">
-              <h2>Social Media</h2>
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">Youtube</a>
-              <a href="#">Twitter</a>
-          
-          </div>
-          <div class="footer-heading">
-                <h2>Favorite Vlogs</h2>
-                <a href="#">Amazing Philippines</a>
-              <a href="#">Travel Escape</a>
-              <a href="#"> Carbon Market</a>
-              <a href="#">Bus Terminals</a>
-            <!--    <div class="footer-email-form">  
-                <form>
-                  <label for="fname">First name:</label>
-                  <input type="text" id="fname" name="fname">
-                  <label for="lname">Last name:</label>
-                  <input type="text" id="lname" name="lname"><br><br>
-                  <input type="submit" value="Submit">
-                </form>
-            <input type="email" placeholder="Enter your email" 
-                address id="footer-email">
-                <input type="submit" value="Sign Up" 
-                id="footer-email-btn">-->
-            </div>
-    </div> <!-- footer-->
- </div> <!-- footer-container-->
+          </div><!--footer-ends-->
+
+</div><!--footer-container-->
+
 </body>
-<script>    
-    src="script/desscript.js";
-</script>
+
 </html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    <link rel="stylesheet" href ='css/stf.css.css'>
+    <link rel="stylesheet" href ='css/slidecss.css'>
+    <link rel="stylesheet" href ='css/thumbcss.css'>
+    <link rel="stylesheet" href ='css/brcss.css'>
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+  </head>
+<body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+    <button type="button" onclick="cancelout()" class="cancelbtn">Previous page</button>
+          <li><a href="index.html">Home</a></li>
+  
+          
+        </ul>
+      </nav>
+    </header>
+
+    <section class ="rooms" id="rooms">
+          <p>Rent  $15 a day, furnished.
+          Small room. 
+          Own Kitchen and Bathroom.</p>
+          Minimum stay 2 nights. 
+          Maximum stay 5 nights (negotiable) </p>
+      <h2>Room 3</h2>
+      <p>Check and plan how to enjoy our wide range of room services.</p>
+      <ul class="cards">
+        <li>
+    <!--      <video width = "700" height = "400" autoplay muted>
+                  <source src='images/glagoonpic3.jpg' type="video/mp4"  >                 
+          </video>    
+-->
+          <img src='images/glagoonpic3.jpg' width = "700" height = "400" alt="img">     
+          <p>Green Lagoon beach</p>
+      
+         <h1>Click Photos to Enlarge</h1>
+        </li>
+        <li class="rcard">
+          
+
+
+  	        <img class="thumbnail" src="images/unit4.jpg" alt="Thumbnail" onclick="showFullImage('images/unit4.jpg')">
+  	        <img class="full-image" id="fullImage" src="images/unit4.jpg" alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		   <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	           <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                   </div>
+
+                 </div>
+        </li>
+        <li class="rcard">
+          
+
+  	        <img class="thumbnail" src="images/unit4inside2.jpg" alt="Thumbnail" onclick="showFullImage('images/unit4inside2.jpg')">
+  	        <img class="full-image" id="fullImage" src="images/unit4inside2.jpg" alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		   <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	           <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                   </div>
+
+                 </div>
+
+        </li>
+        <li class="rcard">
+          
+
+  	        <img class="thumbnail" src="images/unit3pic1.jpg" alt="Thumbnail" onclick="showFullImage('images/unit3pic1.jpg')">
+  	        <img class="full-image" id="fullImage" src="images/unit3pic1.jpg" alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		   <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	           <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                   </div>
+
+                 </div>
+
+        </li>
+        <li class="rcard">
+         
+
+  	        <img class="thumbnail" src="images/unit3pic2.jpg" alt="Thumbnail" onclick="showFullImage('images/unit3pic2.jpg')">
+  	        <img class="full-image" id="fullImage" src="images/unit3pic2.jpg" alt="Full Image">
+
+  	         <div class="lightbox" id="lightbox">
+
+    		   <span class="close-button" onclick="closeLightbox()">&times;</span>
+
+    	           <div class="lightbox-content">
+                     <img id="lightboxImage" src="" alt="Full Image">
+                   </div>
+
+                 </div>
+
+        </li>
+        
+        
+      </ul>
+    </section>
+<div class="footer-container">
+            
+     <div class= "footer">
+                <div class = "ft">
+                   <h2 class="logo"><a href = "index.html"><img src ='images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+                   <div>
+                     <a href = "index.html">Home</a>
+                  </div>
+                </div> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="#">Taxi - Grab</a>
+                   <a href="#">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="#">Ayala</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="#">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="#">Cebu AirB&B</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="#">Travel Escape</a>
+                   <a href="#"> Carbon Market</a>
+                   <a href="#">Bus Terminals</a>
+                
+                </div>
+
+          </div><!--footer-ends-->
+
+</div><!--footer-container-->
+<script>
+
+    function showFullImage(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage").src = imageUrl;
+       //  document.getElementById("fullImage").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage").src = imageUrl;
+       document.getElementById("lightbox").style.display = "flex";
+       }
+      
+      function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+  </script> 
+ <script>
+function cancelout() {
+  window.history.back();
+}
+</script>   
+   </body>  
+</html>

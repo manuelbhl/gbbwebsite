@@ -1,0 +1,273 @@
+
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    
+    <link rel="stylesheet" href ='css/brcss.css'>
+   
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title> GBB reserve</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- FontAwesome 6.3.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->   
+ 
+
+  </head>
+<body>
+<header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          
+          <li><a href="services.html">Services</a></li>
+          <li><a href="locationx.html">Location</a></li>
+         
+          
+        </ul>
+      </nav>
+   </header>
+
+<br><br><br><br>
+    
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Open Sans', sans-serif;
+            padding-top: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            color: #007bff;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding-left: 40px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: none;
+            transition: border-color 0.3s;
+            font-size: 14px;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .form-group i {
+            position: absolute;
+            top: 34px;
+            left: 10px;
+            color: #007bff;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            margin-bottom: 25px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+            cursor: pointer;
+        }
+
+        .form-group textarea {
+            border-radius: 8px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            border-radius: 8px;
+        }
+
+        /* Form Icons */
+        .fa {
+            color: #007bff;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 767px) {
+            .form-header h2 {
+                font-size: 24px;
+            }
+
+            .form-group input, .form-group select, .form-group textarea {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+<section>
+
+<div class="container" style="margin-bottom:40px;">
+    <div class="form-header">
+        <h2>GBB Reservation Form</h2>
+    </div>
+    <form id="form">
+        <div class="row form-row">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="firstname"><i class="fa fa-user"></i> First Name</label>
+                    <input type="text" class="form-control "name="firstname" id="firstname" placeholder="Enter first name" ></input>
+               </div>
+               <div class="form-group">
+                    <label for="lastname"><i class="fa fa-user"></i> Last Name</label>
+                    <input type="text" class="form-control "name="lastname" id="lastname" placeholder="Enter last name" ></input>
+                </div>               
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="Email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email"></input>
+                </div>
+                
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+                    <input type="text" class="form-control" id="phone" name="phonenum" placeholder="Enter phone number" required></input>
+                </div>
+                
+                <!-- Number of Guests -->
+                <div class="form-group">
+                    <label for="guestnum"><i class="fa fa-users"></i> Number of Guests</label>
+                    <select class="form-control" name="guestnum" id="guestnum">
+                        <option value="">Select number of guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6">
+                <!-- Check-in Date -->
+                <div class="form-group">
+                    <label for="arrvdate"><i class="fa fa-calendar"></i> Check-in Date</label>
+                    <input type="date" class="form-control" name="arrvdate"  id="arrvdate" placeholder="Arrival date"></input>
+                </div>
+                
+                <!-- Check-out Date -->
+                <div class="form-group">
+                    <label for="chkoutdate"><i class="fa fa-calendar"></i> Check-out Date</label>
+                    <input type="date" class="form-control" id="chkoutdate" name="chkoutdate" placeholder="Checkout date"></input>
+                </div>
+                <div class="form-group">
+                    <label for="daynum"><i class="fa fa-calendar"></i> Number of days</label>
+                    <input type="num" class="form-control" id="daynum" name="daynum" value ="This is read-only" readonly ></input>
+                </div>
+                <!-- Room Type -->
+                <div class="form-group">
+                    <label for="unitnum"><i class="fa fa-bed"></i>Unit number</label>
+                    <select class="form-control"  name = "unitnum" id="unitnum" >
+                        <option value="">Select room type</option>
+                        <option value="single">Unit 1</option>
+                        <option value="double">Unit 2</option>
+                        <option value="suite">Unit 3</option>
+                        <option value="suite">Unit 4</option>
+                    </select>
+                </div>
+                
+  
+              <!-- Special Requests -->
+                <div class="form-group">
+                    <label for="msg"><i class="fa fa-pencil"></i> Special Requests</label>
+                    <textarea class="form-control" name="msg" id="msg" rows="4" placeholder="Any special requests?" maxlength="300"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Submit Booking</button>
+    </form>
+</div>
+</section>
+
+<!-- Bootstrap and jQuery JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<section>
+
+</section> 
+<script>
+    const form = document.getElementById('form');
+    const firstname = document.getElementById('firstname');
+    const email = document.getElementById('email');
+    const lastname = document.getElementById('lastname');
+
+    form.addEventListener( 'submit', function(e){
+         e.preventDefault();
+
+         const firstnameValue = firstname.value;
+         const emailValue = email.value;
+         const lastnameValue = lastname.value;
+
+         localStorage.setItem( 'resv-firstname', firstnameValue);
+         localStorage.setItem('resv-email', emailValue);
+         localStorage.setItem('resv-lastname', lastnameValue);
+
+         window.location.href = "resvconfirm.html"
+
+})
+
+</script>
+
+</body>
+</html>
