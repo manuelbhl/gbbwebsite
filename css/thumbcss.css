@@ -3,22 +3,24 @@
    display: flex;
    flex-wrap: wrap; 
   flex-direction: row;
-  row-gap: 40px;
-  
- align-items: center;
- justify-content: space-between;
-  margin-top: 50px;
-  
+  row-gap: 10px; 
+  align-items: center;
+  justify-content:center;
+  margin-top: 10px; 
+  margin-left: 10px; 
   background-color: white;
+
 }
+
 .contentloc{
   display: flex;
-  margin: 30px;
+  margin: 10px;
   padding : 10px;
- 
+ flex-wrap: wrap; 
   height: 95%;
-  flex-direction: row;
-  ;
+  flex-direction:row;
+
+  
 }
 
 h1 {

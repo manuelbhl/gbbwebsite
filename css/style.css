@@ -39,6 +39,9 @@ header  {
 .navbar input#menu-toggler {
   display: none;
 }
+.navbar #xsign{
+    display:none;  
+  }
 
 .navbar #hamburger-btn {
   cursor: pointer;
@@ -119,6 +122,17 @@ header a:hover, footer a:hover {
   justify-content: center;
   flex-direction: column;
 }
+.roomunits{
+ 
+  display: flex;
+  height: 50%;
+  z-index: 3;
+  align-items: center;
+  
+  justify-content: center;
+  flex-direction: column;
+}
+
 .page1 {
   margin-top:100px;
   border: 2px solid green;
@@ -206,8 +220,7 @@ section .cards {
 }
 
 
-
-section.about {
+section .about {
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -228,6 +241,7 @@ section.about {
 .about .team ul {
   padding-left: 20px;
 }
+
 
 section .cards .card {
   background: #fff;
@@ -254,16 +268,17 @@ section .cards .rcard {
   margin-bottom: 40px;
   width: calc(100% / 2 - 30px);
   text-align: center;
+
 }
 
 .rooms{
   margin:100px;
   display: flex;
   align-items: center;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
   padding: 40px 0 0;
-  border: 2px solid red;
+
 }
 .services{
   margin:10px;
@@ -296,6 +311,7 @@ flex-wrap: wrap;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 7px;
+
 }
 
 
@@ -305,6 +321,7 @@ flex-wrap: wrap;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 7px;
+
 }
 
 .locabox .card img {
@@ -313,12 +330,14 @@ flex-wrap: wrap;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 7px;
+
 }
 
 
 .cards .card p {
-  padding: 0 15px;
+  padding: 0;
   margin-top: 5px;
+  
 }
 
 section .cards .card h3 a:hover {
@@ -482,37 +501,73 @@ footer a {
          }
 
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 768px) {
+
+header  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  background: lightgreen;
+}
+
+.navbar {
+  display: flex;
+  
+  padding: 0 10px;
+  max-width: 860px;
+  width: 100%;
+  justify-content: center;
+  
+}
+
   .navbar .all-links {
     position: fixed;
     left: -100%;
     width: 300px;
     display: block;
     height: 100vh;
-    top: 75px;
+    top: 10px;
     background: lightgrey;
     transition: left 0.3s ease;
   }
 
-  .navbar #menu-toggler:checked~.all-links {
+  .navbar  #menu-toggler:checked~.all-links {
     left: 10px;
   }
 
+
   .navbar .all-links li {
-    font-size: 18px;
+    font-size: 12px;
   }
 
   .navbar #hamburger-btn {
     display: block;
+  
   }
 
-  section > p {
-    text-align: center;
+ .navbar #xsign{
+    display: block;     
+    color:white;  
+    font-size:5px;;
+    margin-left:15px;
   }
+ 
+.rdesc{
+  display: block;
+  margin:0px;
+  padding:0px;
 
-  section .cards .card {
-    width: calc(100% / 2 - 15px);
-    margin-bottom: 30px;
+}
+
+
+
+ .cards .card {
+    margin:0px;
+    padding:0px;
+
   }
 
   .homepage .content h1 {
@@ -542,9 +597,18 @@ footer a {
     margin-top: 40px;
   }
 
+
+
   footer a {
     height: 0;
   }
+
+
+.homepage .content {
+  margin:0px;
+}
+
+
 }
 
 
@@ -553,22 +617,88 @@ footer a {
 
 
 @media screen and (max-width: 560px) {
+
+
+body {
+  margin: 20px;
+  padding: 20px;
+  
+}
+header  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  background: lightpink;
+}
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 150px;
+    display: block;
+    height: 100vh;
+    top: 10px;
+    background: lightgrey;
+    transition: left 0.3s ease;
+  }  
+.navbar {
+  display: flex;
+  
+  padding: 0 10px;
+  max-width: 560px;
+  width: 100%;
+  justify-content: center;
+  
+}
+
+
   section .cards .card {
     width: 100%;
+
     margin-bottom: 30px;
   }
 
 .navbar #hamburger-btn {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+
+section .rdesc {
+     margin: 20px;
+     padding: 20px;
+
+    margin-bottom: 30px;
+  }
+
+
   }
   .rooms{
   
   border: 2px solid white;
   }
+ 
+.rooms #roomdesc{
+  display: block;
+  margin:0px;
+  padding:0px;
+}
 
-
+ .cards .card {
+    margin:0px;
+    padding:0px;
+  }
+.roomunits{
+ 
+  display: flex;
+ 
+  z-index: 3;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
 }
 
 

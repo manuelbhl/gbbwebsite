@@ -5,24 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gbbweb </title>
     <link rel="stylesheet" href ='css/style.css'>
-    <!-- <link rel="stylesheet" href ='css/stfcss.css'>
-    <link rel="stylesheet" href ='css/slidecss.css'> -->
+    
+   
     <link rel="stylesheet" href ='css/brcss.css'>
    <link rel="stylesheet" href ='css/thumbcss.css'>
 
     <!-- Fontawesome Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    
-   <style>
-   .modal {
-    position:fixed;
-    margin:30px;
-    padding:20px;
-    max-width: 120ch;
-    border: solid 2px;  
-  }
 
-</style>
 
 
   </head>
@@ -53,13 +43,14 @@
  <h1>We are here. Our Location in the World. <span style = "background-color: rgb(0, 255, 153); font-size: smaller;">Click photos for full page</span></h1>
  
  
-   <div class ="homeloc"> 
+ <div class ="homeloc"> 
 
      <!-- contentloc boundary1  -->
-
-          <div class ="contentloc">
-   
-            <div>
+    <div class ="contentloc">
+          
+       <ul class = "cards">  
+         <li class="card"> 
+            
 
   	      <img class="thumbnail" src="images/direction2.png" alt="Thumbnail" onclick="showFullImage('images/direction2.png')">
   	      <img class="full-image" id="fullImage" src="images/direction2.png" alt="Full Image">
@@ -74,16 +65,17 @@
 
                </div>
 
-              <p>Direction 45 kilometers away. You may </p>
+              <p>Direction to our property.</p>
+              <p>We are 45 minutes from the Cecu Mactan Airport.</p> 
               <h3><a href= "#gogmap">Google it</a></h3>.
-              <p>45 minutes from the Cecu Mactan Airport.</p> 
-             
-            </div>   
-        
+              
+             <br><br>
+              
+          </li>
  
-        <div class = "contentloc">
+          <li class="card">
         
-          <div>
+
           <img class="thumbnail" src='images/GoogleCEb8.png' alt="Thumbnail" onclick="showFullImage('images/GoogleCEb8.png')">
   	      <img class="full-image" id="fullImage" src="images/GoogleCEb8.png" alt="Full Image">
 
@@ -98,15 +90,16 @@
                </div>     
                    
           <p>Green Lagoon Beach</p>
-          <h3><a href= "#gogmap">Google it</a></h3>.
           <p>100 meters from our Property</p>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+          
        
-        </div> 
-       </div>
+        <br><br>
+        </li>
 
-      <div class ="contentloc">
+         <li class="card">
        
-        <div>
+   
   	   <img class="thumbnail" src='images/GoogleCEbu2.png' alt="Thumbnail" onclick="showFullImage('images/GoogleCEbu2.png')">
   	   <img class="full-image" id="fullImage" src="images/GoogleCEbu2.png" alt="Full Image3">
 
@@ -122,19 +115,21 @@
             </div>     
 
           <p>Cebu Island</p>
+          <p>It is located at the middle of the whole country, geograpically.</p>  
           <h3><a href= "#gogmap">Google it</a></h3>.
-          <p>It is located at the middle of the whole country, geograpically.</p>
-
-         </div>   
-        </div>             
-    </div>
-
+          
+         <br><br>
+            
+      </li>    
+     </ul>
+  </div>
 <!--  end contentloc boundary1  -->
 
  <!--  contentloc boundary2  -->
-         <div class ="contentloc">
-   
-            <div>
+   <div class ="contentloc">
+         
+       <ul class = "cards">  
+         <li class="card"> 
 
   	      <img class="thumbnail" src="images/mapFront.png" alt="Thumbnail" onclick="showFullImage('images/mapFront.png')">
   	      <img class="full-image" id="fullImage" src="images/mapFront.png" alt="Full Image">
@@ -150,15 +145,16 @@
                </div>
 
               <p>Tour Adventures</p>
+              <p>We can arrange for you tour of Cebu.</p>
              <h3><a href= "#gogmap">Google it</a></h3>.
-              <p>We can arrange for you tour of Cebu.</p> 
-             
-            </div>   
-        
+               
+            <br><br>     
+            
+        </li>
  
-        <div class = "contentloc">
+        <li class="card"> 
         
-          <div>
+          
           <img class="thumbnail" src='images/entrance1.jpg' alt="Thumbnail" onclick="showFullImage('images/entrance1.jpg')">
   	      <img class="full-image" id="fullImage" src= "images/entrance1.jpg" alt="Full Image">
 
@@ -173,15 +169,18 @@
                </div>     
                    
           <p>Entrance to our Property </p>
-          <h3><a href="https://www.tripadvisor.ca/Attractions-g294261-Activities-Cebu_Island_Visayas.html">Google it</a></h3>. 
           <p>50 meters from the national road.</p>
+          <h3><a href="https://www.tripadvisor.ca/Attractions-g294261-Activities-Cebu_Island_Visayas.html">Google it</a></h3>. 
+          
+          <br><br>
        
-        </div> 
-       </div>
+       
 
-      <div class ="contentloc">
+      </li>
+ 
+        <li class="card"> 
        
-        <div>
+        
   	   <img class="thumbnail" src='images/GoogleCEbu.png' alt="Thumbnail" onclick="showFullImage('images/GoogleCEbu.png')">
   	   <img class="full-image" id="fullImage" src='images/GoogleCEbu.png' alt="Full Image">
 
@@ -197,19 +196,25 @@
             </div>     
 
           <p>Cebu Philippines.  </p>
-          <h3><a href= "#gogmap">Google it</a></h3>.
           <p>The Philppines is at the Pacific Ocean front .</p>
-
-         </div>   
-        </div>             
-    </div>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+           <br><br>
+            
+       
+        
+      </li>
+    </ul>
+            
+  </div>
 
  <!--  end contentloc boundary2  -->
 
  <!-- homeloc boundary 3 -->
-         <div class ="contentloc">
+   <div class ="contentloc">
    
-            <div>
+       <ul>     
+ 
+        <li class="card"> 
 
   	      <img class="thumbnail" src='images/mapFront2.png' alt="Thumbnail" onclick="showFullImage('images/mapFront2.png')">
   	      <img class="full-image" id="fullImage" src="images/mapFront2.png" alt="Full Image">
@@ -225,15 +230,17 @@
                </div>
 
               <p>Cebu local map </p>
-              <h3><a href= "#gogmap">Google it</a></h3>.
               <p>One of the most beautiful islands in the Philippines.</p> 
-             
-            </div>   
-        
+              <h3><a href= "#gogmap">Google it</a></h3>.
+              
+              <br><br>
  
-        <div class = "contentloc">
+       
+        </li>
+ 
+        <li class="card"> 
         
-          <div>
+       
           <img class="thumbnail" src='images/gl1a.jpg' alt="Thumbnail" onclick="showFullImage('images/gl1a.jpg')">
   	      <img class="full-image" id="fullImage" src='images/gl1a.jpg' alt="Full Image">
 
@@ -248,16 +255,17 @@
                </div>     
                    
           <p>Green Lagoon beach resort </p>
-          <h3><a href="https://www.tripadvisor.ca/Attractions-g294261-Activities-Cebu_Island_Visayas.html">Google it</a></h3>. 
           <p>100 meters from us</p>
-       
-        </div> 
-       </div>
+          <h3><a href="https://www.tripadvisor.ca/Attractions-g294261-Activities-Cebu_Island_Visayas.html">Google it</a></h3>. 
+          
+       <br><br>
 
-      <div class ="contentloc">
+      </li>
+ 
+        <li class="card"> 
        
-        <div>
-  	   <img class="thumbnail" src= "images/cath.jpg" alt="Thumbnail" onclick="showFullImage('images/cath.jpg')">
+        
+	   <img class="thumbnail" src= "images/cath.jpg" alt="Thumbnail" onclick="showFullImage('images/cath.jpg')">
   	   <img class="full-image" id="fullImage" src="images/cath.jpg" alt="Full Image">
 
   	    <div class="lightbox" id="lightbox">
@@ -272,21 +280,24 @@
             </div>     
 
           <p>a 500+ years old Cebu Cathedral Church</p>
-          <h3><a href= "#gogmap">Google it</a></h3>. 
           <p>It is located in downtown Cebu, 25 KM from Compostela, Cebu.</p>
-
-         </div>   
-        </div>             
-    </div>
+          <h3><a href= "#gogmap">Google it</a></h3>. 
+          
+          <br><br>
+           
+     </li>
+   </ul>  
+ 
+        <li class="card">       
+ </div>
 <!--  end contentloc boundary3  -->
 
-</div>
      <!-- contentloc boundary4  -->
+      <div class ="contentloc">
 
-          <div class ="contentloc">
+      <ul class = "cards">  
+          <li class="card">  
    
-            <div>
-
   	      <img class="thumbnail" src="images/airport2.png" alt="Thumbnail" onclick="showFullImage('images/airport2.png')">
   	      <img class="full-image" id="fullImage" src="images/airport2.png" alt="Full Image">
 
@@ -301,15 +312,16 @@
                </div>
 
               <p>Mactan International Airport </p>
-              <h3><a href="https://www.mactancebuairport.com/">Google it</a></h3>. 
               <p>45 minutes from the Cecu Mactan Airport.</p> 
-             
-            </div>   
-        
+              <h3><a href="https://www.mactancebuairport.com/">Google it</a></h3>. 
+              
+              <br><br>
+            
+           </li>  
  
-        <div class = "contentloc">
+        <li class="card">  
         
-          <div>
+          
           <img class="thumbnail" src='images/greenpool.jpg' alt="Thumbnail" onclick="showFullImage('images/greenpool.jpg')">
   	      <img class="full-image" id="fullImage" src="images/greenpool.jpg" alt="Full Image">
 
@@ -323,16 +335,15 @@
 
                </div>     
                    
-          <p>Green Lagoon Swiming pool</p>
+          <p>Green Lagoon Swimming pool</p>
           <h3><a href= "#gogmap">Google it</a></h3>.  
 
-            
-        </div> 
-       </div>
+          <br><br>
+      </li>
 
-      <div class ="contentloc">
+      <li class="card">  
        
-        <div>
+       
   	   <img class="thumbnail" src='images/house99a.jpg' alt="Thumbnail" onclick="showFullImage('images/house99a.jpg')">
   	   <img class="full-image" id="fullImage" src="images/house99a.jpg" alt="Full Image3">
 
@@ -348,12 +359,14 @@
             </div>     
 
           <p>Our Whole GBB house</p>
-          <h3><a href= "#gogmap">Google it</a></h3>.
           <p>It is located at the middle of the whole country, geograpically.</p>
-
-         </div>   
-        </div>             
-    </div>
+          <h3><a href= "#gogmap">Google it</a></h3>.
+          
+           <br><br>
+        
+       </li>   
+  </ul>      
+ </div>
 
 <!--  end contentloc boundary4  -->
 

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gbbweb </title>
+    <link rel="stylesheet" href ='css/style.css'>
+    
+   
+    <link rel="stylesheet" href ='css/brcss.css'>
+   <link rel="stylesheet" href ='css/thumbcss.css'>
+
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+
+  </head>
+<body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><img src= 'images/GmpsLogo.png' alt="img" width = 100 height = 100></a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="index.html">Home</a></li>
+          
+          <li><a href="services.html">Services</a></li>
+          <li><a href="reservex2.html">Reservation</a></li>
+         
+          
+        </ul>
+      </nav>
+   </header>
+ 
+
+<br/>
+ <h1>Our individual rooms are below  <br><span style = "background-color: rgb(0, 255, 153); font-size: smaller;">Click photos to get the sample details of each room</span></h1>
+ 
+ 
+ <div class ="homeloc"> 
+
+     <!-- contentloc boundary1  -->
+    <div class ="contentloc">
+          
+       <ul class = "cards">  
+
+<!-- Availabilty1  -->
+        <li class="card">
+<h3><a href="roomx1.html">Unit 1</a></h3>
+          <a href = "roomx1.html"><img src ='images/rmunit1.jpg' width = 500px height =400px  alt="img"></a>
+          
+          <p>Rent  $35 a day, furnished</p>
+          <p>You take the whole Up-Down</p> 
+          <p>Own Kitchen and Bathroom</p>
+          <p>Minimum stay 2 nights</p>
+          <p>Maximum stay 5 nights (negotiable)</p>
+
+         <br>      
+        <button class="button open-button" style="background-color: yellow;"></a>
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 1 Availabilty</a>  </span></button>  
+             
+        <br><br><br>                   
+        </li>
+<!-- end Availabilty1  -->
+<!-- Availabilty2  -->
+        <li class="card">
+ <h3><a href="roomx2.html">Unit 2</a></h3>
+          <a href = "roomx2.html"><img src ='images/rmunit2.jpg' width = 500px height =400px  alt="img"></a>
+         
+                   
+           <p>Rent  $35 a day, furnished</p>
+           <p>You with Terrace</p> 
+           <p>Own Kitchen and Bathroom</p>
+           <p>Minimum stay 2 nights</p>
+           <p>Maximum stay 5 nights (negotiable)</p>
+
+        </br>      
+        <button class="button open-button" style="background-color: yellow;">
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 2 Availabilty</a>  </span></button> 
+ 
+        <br><br><br>        
+         
+        </li>
+<!-- end Availabilty2  -->
+<!-- Availabilty3  -->
+        <li class="card">
+<h3><a href="roomx3">Unit 3</a></h3>
+          <a href = "roomx3.html"><img src ='images/rmunit4a.jpg' width = 500px height =400px  alt="img"></a>
+          
+          <p>Rent  $15 a day, furnished</p>
+          <p>Small room</p> 
+          <p>Own Kitchen and Bathroom</p>
+          <p>Minimum stay 2 nights</p>
+          <p>Maximum stay 5 nights (negotiable) </p>
+
+         </br>      
+        <button class="button open-button" style="background-color: yellow;">
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 3 Availabilty</a>  </span></button> 
+ 
+       <br><br><br>        
+         
+        </li>
+<!-- end Availabilty3  -->
+<!-- Availabilty4  -->
+        <li class="card">
+<h3><a href="roomx4.html">Unit 4</a></h3>
+          <a href = "roomx4.html"><img src ='images/rmunit2a.jpg' width = 500px height =400px alt="img"></a>
+          
+          <p>Rent  $20 a day, furnished</p>
+          <p>regular</p> 
+          <p>Own Kitchen and Bathroom</p>
+          <p>Minimum stay 2 nights</p>
+          <p>Maximum stay 5 nights (negotiable)</p>
+
+        </br>      
+        <button class="button open-button" style="background-color: yellow;">
+             <span  style = "font-size: large;"><a href="avail1.html">Check Unit 4 Availabilty</a>  </span></button>  
+ 
+        <br><br><br>        
+      
+        </li>
+
+<!-- end Availabilty4  -->
+        
+     </ul>
+
+     </ul>
+  </div>
+<!--  end contentloc boundary1  -->
+
+
+<!--  end contentloc boundary4  -->
+
+
+
+<script>
+
+
+    function showFullImage(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage").src = imageUrl;
+       //  document.getElementById("fullImage").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage").src = imageUrl;
+       document.getElementById("lightbox").style.display = "flex";
+       
+
+    }
+
+       function showFullImage2(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage2").src = imageUrl;
+       //  document.getElementById("fullImage2").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage2").src = imageUrl;
+       document.getElementById("lightbox2").style.display = "flex";
+       
+
+    }
+
+      function showFullImage3(imageUrl) {
+       // Method 1:  Replace thumbnail with full image (basic)
+       //  document.getElementById("fullImage3").src = imageUrl;
+       //  document.getElementById("fullImage3").style.display = "block";
+
+        // Method 2: Lightbox effect
+       document.getElementById("lightboxImage3").src = imageUrl;
+       document.getElementById("lightbox3").style.display = "flex";
+       
+
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function closeLightbox2() {
+      document.getElementById("lightbox2").style.display = "none";
+    }
+   function closeLightbox3() {
+      document.getElementById("lightbox3").style.display = "none";
+    }
+  </script> 
+<br><br>
+
+<div class="footer-container">
+            
+     <div class= "footer">
+                <div class = "ft">
+                   
+                   <h2 class="logo"><a><img src="images/GmpsLogo.png" alt="img" width = 100 height = 100></a></h2>
+
+                 
+                   <div>
+                     <a href = "/index">Home</a>
+                  </div>
+                </div><!--ft-ends--> 
+                </br></br>     
+                <div class="footer-heading footer-1">
+                   <h2>Cebu Links</h2>
+                   <a href="https://www.mactancebuairport.com/">Mactan Airport</a>
+                   <a href="https://www.youtube.com/watch?v=Y3rVRM4vAC4">Taxi - Grab</a>
+                   <a href="https://www.youtube.com/watch?v=hPLk5OvSb-A">Churches</a>
+                   <a href="https://www.smsupermalls.com/mall-directory/sm-city-cebu/information/">SM Malls</a>
+                   <a href="https://www.youtube.com/watch?v=1KQK6c7BL54">Ayala</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-2">
+                  <h2>Hotel & Resorts</h2>
+                  <a href="https://www.travelingcebu.com/green-lagoon-park.html">Green Lagoon</a>
+                  <a href="https://www.youtube.com/watch?v=P2bFeqj2ggI">Marco Polo Hotel</a>
+                  <a href="https://www.tripadvisor.com/AttractionProductReview-g294261-d25245114-Cebu_City_Historical_Street_and_Food_Tour-Cebu_Island_Visayas.html">SurfSide Motel</a>
+                  <a href="https://www.youtube.com/@StanlyOnMedia/shorts">Cebu Food</a>
+                    
+                </div>
+                
+                <div class="footer-heading footer-3">
+                   <h2>Favorite Vlogs</h2>
+                   <a href="https://www.youtube.com/channel/UC-jq_OD2e2xIcm5RdTrBcNg/videos">Amazing Philippines</a>
+                   <a href="https://www.youtube.com/results?search_query=travel+escapes+latest+vlog">Travel Escape</a>
+                   <a href="https://www.youtube.com/watch?v=EUx4W64lOys"> Carbon Market</a>
+                   <a href="https://www.youtube.com/@brogabrielsuroysugbo">Bus Terminals</a>
+                
+                </div>
+
+          </div><!--footer-ends-->
+
+</div><!--footer-container-->
+
+
+</body>   
+
+</html>
