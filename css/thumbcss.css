@@ -11,28 +11,16 @@
   background-color: white;
 
 }
-
 .contentloc{
   display: flex;
   margin: 10px;
   padding : 10px;
  flex-wrap: wrap; 
   height: 95%;
-  flex-direction:row;
-
-  
+  flex-direction:row;  
 }
 
-h1 {
-      margin-top:100px;
-      margin-bottom:30px;
-      margin-left:80px;
-      align-items: center;
-      justify-content: center;
-      color: green;
-      
 
-}
   .thumbnail {
     width: 300px; /* Example thumbnail size */
     height: auto;   
