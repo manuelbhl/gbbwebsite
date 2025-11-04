@@ -135,7 +135,7 @@ header a:hover, footer a:hover {
 
 .page1 {
   margin-top:100px;
-  border: 2px solid green;
+  border: 2px solid white;
   align-content: center;
 
 }
@@ -503,12 +503,6 @@ footer a {
 
 @media screen and (max-width: 768px) {
 
-body {
-  margin: 15px;
-  padding: 15px;
-  
-}
-
 header  {
   position: fixed;
   top: 0;
@@ -673,22 +667,41 @@ header  {
 section .rdesc {
      margin: 15px;
      padding: 15px;
-
     margin-bottom: 30px;
   }
 
 
   }
-  .rooms{
-  
-  border: 2px solid white;
-  }
- 
-.rooms #roomdesc{
-  display: block;
-  margin:0px;
-  padding:0px;
+
+/*---rooms only--*/
+
+.rooms{
+  margin:5px;
+  display: flex; 
+  flex-direction: column;
+  padding: 5px;
+border: 2px solid red;
 }
+
+section .cards {
+  display: flex;  
+  flex-direction: column;
+}
+
+
+.rooms .cards .rcard{   
+  width: 100%;
+background: lightblue;   
+}
+
+.rooms .cards .rcard img {  
+  object-fit: cover;
+  border-radius: 50px;
+  width: 100%;
+background: yellow; 
+}
+
+/*-ends -rooms only--*/
 
  .cards .card {
     margin:0px;
