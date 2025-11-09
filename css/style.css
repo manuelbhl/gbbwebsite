@@ -526,6 +526,7 @@ header  {
   position: fixed;
   top: 0;
   left: 0;
+  max-width: 768px;
   z-index: 5;
   width: 100%;
   display: flex;
@@ -536,7 +537,7 @@ header  {
   display: flex;
   
   padding: 0 10px;
-  max-width: 860px;
+  max-width: 768px;
   width: 100%;
   justify-content: center;
   
@@ -628,6 +629,7 @@ header  {
 }
 
 
+
 }
 
 
@@ -649,6 +651,7 @@ header  {
   top: 0;
   left: 0;
   z-index: 5;
+  max-width: 560px; 
   width: 100%;
   display: flex;
   background: lightblue;
@@ -691,7 +694,6 @@ section .rdesc {
   }
 
 
-  }
 
 /*---rooms only--*/
 
@@ -745,8 +747,8 @@ background: yellow;
 .homeloc li{
   margin: 40px;
   padding: 10px;
-  background: lightgreen; 
-/* border: 1px solid brown;*/
+/*  background: lightgreen; 
+ border: 1px solid brown;*/
 }
 
 }
